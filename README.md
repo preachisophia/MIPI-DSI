@@ -55,9 +55,32 @@ The long packet is `AA FF | DI WC(2) ECC | payload (WC bytes) | CRC(2) FF BB`.
 - The registers are programmed through the Synopsys AHB VIP master, which also checks AHB protocol rules.
 - Functional coverage: `dc_cg` and `ppi_cg` covergroups in the scoreboard. Assertion coverage through `-cm assert`.
 
-## Running
+## Requirements and setup
 
-Requires VCS and Verdi R-2020.12-SP2, UVM 1.2 and the Synopsys AMBA VIP (V-2023.12). Tool paths are set at the top of `VERIFY/bin/Makefile`.
+The testbench needs licensed Synopsys tools. Nothing from them is included in this repository.
+
+| Tool | Version used | Makefile variable |
+|---|---|---|
+| VCS (with UVM 1.2) | R-2020.12-SP2 | `VCS_HOME` |
+| Verdi (waveforms, GUI) | R-2020.12-SP2 | `VERDI_HOME` |
+| VC VIP, AMBA AHB | V-2023.12 | `DESIGNWARE_HOME`, `VIP_VERSION` |
+| Licence server | | `SNPSLMD_LICENSE_FILE` |
+
+The AHB master is the Synopsys AMBA VIP, so the testbench does not compile without it. On the first `make compile` the Makefile runs `dw_vip_setup` from `$DESIGNWARE_HOME/bin` to generate the VIP model directory in `VERIFY/bin/vip/` (ignored by git).
+
+The defaults point to `/tools/synopsys/...` and a licence server on port 27000 of the local host. If your install is elsewhere, set the variables in your environment or on the command line:
+
+```
+make compile VCS_HOME=/opt/synopsys/vcs/R-2020.12-SP2 \
+             VERDI_HOME=/opt/synopsys/verdi/R-2020.12-SP2 \
+             DESIGNWARE_HOME=/opt/synopsys/vip VIP_VERSION=V-2023.12 \
+             SNPSLMD_LICENSE_FILE=27000@licserver
+make info        # shows the paths that will be used
+```
+
+Other VCS and VIP versions should work but have not been tried.
+
+## Running
 
 ```
 cd VERIFY/bin

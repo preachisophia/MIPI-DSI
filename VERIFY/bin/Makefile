@@ -16,15 +16,19 @@ endif
 # TOOL PATHS
 #-------------------------------------------------------------------------------
 
-VCS_HOME   ?= /tools/synopsys/vcs/R-2020.12-SP2
-VERDI_HOME ?= /tools/synopsys/verdi/R-2020.12-SP2
-RTL_HOME   ?= $(GIT_HOME)/RTL
-TB_HOME    ?= $(GIT_HOME)/VERIFY
-VIP_HOME   ?= /tools/synopsys/vc-vip_vV-2023.12/vip
+# Override any of these on the command line or in the environment to match your
+# install, e.g. make compile DESIGNWARE_HOME=/opt/synopsys/vip VIP_VERSION=V-2023.12
+VCS_HOME        ?= /tools/synopsys/vcs/R-2020.12-SP2
+VERDI_HOME      ?= /tools/synopsys/verdi/R-2020.12-SP2
+DESIGNWARE_HOME ?= /tools/synopsys/vc-vip_vV-2023.12
+VIP_VERSION     ?= V-2023.12
+VIP_HOME        ?= $(DESIGNWARE_HOME)/vip
+RTL_HOME        ?= $(GIT_HOME)/RTL
+TB_HOME         ?= $(GIT_HOME)/VERIFY
 
-# Tool environment, so make works without sourcing tool_setup.csh first
-export VCS_HOME VERDI_HOME
-export DESIGNWARE_HOME      ?= /tools/synopsys/vc-vip_vV-2023.12
+# Tool environment, so make works without sourcing tool_setup.csh first.
+# The licence default assumes the licence server runs on this host.
+export VCS_HOME VERDI_HOME DESIGNWARE_HOME
 export SNPSLMD_LICENSE_FILE ?= 27000@$(shell hostname -s)
 export PATH := $(VCS_HOME)/bin:$(VERDI_HOME)/bin:$(PATH)
 
@@ -119,17 +123,17 @@ VIP_COMPILE_OPTS += +incdir+$(VIP_DIR)/src/sverilog/vcs
 VIP_COMPILE_OPTS += +define+SVT_VENDOR_LC=vcs
 VIP_COMPILE_OPTS += +define+SVT_VENDOR=VCS
 
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/V-2023.12/sverilog
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/V-2023.12/sverilog/include
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/V-2023.12/sverilog/src
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/V-2023.12/sverilog/src/vcs
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/$(VIP_VERSION)/sverilog
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/$(VIP_VERSION)/sverilog/include
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/$(VIP_VERSION)/sverilog/src
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/common/$(VIP_VERSION)/sverilog/src/vcs
 
 VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/V-2023.12
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/V-2023.12/sverilog/src
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/V-2023.12/sverilog/include
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/$(VIP_VERSION)
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/$(VIP_VERSION)/sverilog/src
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/$(VIP_VERSION)/sverilog/include
 
-VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src
+VIP_COMPILE_OPTS += +incdir+$(VIP_HOME)/svt/amba_svt/$(VIP_VERSION)/ahb_system_env_svt/sverilog/src
 
 VIP_COMPILE_OPTS += +define+SVT_UVM_TECHNOLOGY
 VIP_COMPILE_OPTS += +define+UVM_DISABLE_AUTO_ITEM_RECORDING
@@ -264,7 +268,11 @@ info:
 	@echo "GIT_HOME  = $(GIT_HOME)"
 	@echo "RTL_HOME  = $(RTL_HOME)"
 	@echo "TB_HOME   = $(TB_HOME)"
-	@echo "VIP_HOME  = $(VIP_HOME)"
+	@echo "VCS_HOME  = $(VCS_HOME)"
+	@echo "VERDI_HOME= $(VERDI_HOME)"
+	@echo "DESIGNWARE_HOME = $(DESIGNWARE_HOME)"
+	@echo "VIP_HOME  = $(VIP_HOME)  ($(VIP_VERSION))"
+	@echo "LICENSE   = $(SNPSLMD_LICENSE_FILE)"
 	@echo "UVM_TEST  = $(UVM_TEST)"
 	@echo "SEED      = $(SEED)"
 	@echo "COVERAGE  = SystemVerilog Functional + Assertion"
@@ -274,6 +282,10 @@ info:
 vip: $(VIP_DIR)/include/sverilog/svt_source_defines.svi
 
 $(VIP_DIR)/include/sverilog/svt_source_defines.svi:
+	@test -x $(DESIGNWARE_HOME)/bin/dw_vip_setup || { \
+	  echo "ERROR: $(DESIGNWARE_HOME)/bin/dw_vip_setup not found."; \
+	  echo "       The Synopsys AMBA VIP is required; set DESIGNWARE_HOME to its install."; \
+	  exit 1; }
 	$(DESIGNWARE_HOME)/bin/dw_vip_setup -path $(VIP_DIR) -add ahb_system_env_svt -svlog
 
 compile: vip

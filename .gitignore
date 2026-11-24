@@ -1,0 +1,11 @@
+# VCS / Verdi build and run output (VERIFY/bin)
+VERIFY/bin/*
+!VERIFY/bin/Makefile
+!VERIFY/bin/configure.csh
+
+# generated AHB VIP model directory (make vip)
+vip/
+
+# editor files
+*.sw?
+*~

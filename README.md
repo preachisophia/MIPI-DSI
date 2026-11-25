@@ -159,3 +159,31 @@ The VGA, HD and Full HD tests move millions of pixels, so they run with per-pixe
 | `AHB=own` (own agent) | 27 / 27 | 0 | 0 |
 
 The Full HD test compares 4,147,200 pixels (1920 x 1080, 2 frames). The logs and a per-test summary for both runs are in [`outputs/`](outputs/).
+
+## Waveforms
+
+Verdi nWave views of the `SEED=1` runs.
+
+**AHB register write and read-back, Synopsys VIP** (`ahb_dsilngreg_test`, `AHB=vip`). The VIP writes `0x3c` to `dsi_lng` (0x4000_0008) and reads it straight back; the two transfers are back to back (HTRANS = NONSEQ from 25 to 45 ns) and HRDATA returns `0x3c` at the cursor.
+
+![AHB write and read-back with the VIP](screenshots/01_ahb_vip_write_readback.png)
+
+**The same test with the own AHB agent** (`AHB=own`). The write (26-36 ns) and the read (56-66 ns) are separate single transfers with idle cycles between them; HRDATA returns `0x3c` at the cursor.
+
+![AHB write and read-back with the own agent](screenshots/02_ahb_own_write_readback.png)
+
+**Write in the AHB data phase.** The DUT samples HADDR and HWRITE in the address phase (`wr_q` and `haddr_q` go high at 35 ns) and writes HWDATA on the next edge, at the end of the data phase (45 ns, cursor).
+
+![AHB data-phase write inside the DUT](screenshots/03_ahb_data_phase_write.png)
+
+**Pixel input from the DC side** (`lane_3_test`). Two frames, each starting with VSYNC, then three lines of 10 pixels (`data_valid` high).
+
+![DC pixel input](screenshots/04_dc_pixel_input.png)
+
+**One line on four PPI lanes.** The transmission is spread byte by byte over lanes 0-3: three short packets (`cc ff 3e fe ca ..`), then the long packet starting at the cursor with `aa ff`, data identifier `3e`, word count `1e 00` (30 bytes), ECC `32`, followed by the payload.
+
+![Packet on four PPI lanes](screenshots/05_ppi_4lane_packet.png)
+
+**Line in, packet out.** Each line of pixels is followed by `fifo_done`, `packet_done` and a burst on all four lane enables.
+
+![Line to packet overview](screenshots/06_line_to_packet_overview.png)

@@ -18,7 +18,7 @@ RTL/                     transmitter
   lane_manager.sv        spreads the byte stream over 1-4 PPI lanes
 VERIFY/
   bench/top.sv           testbench top, DUT instance, clocks and reset
-  uvc/agent_top/         dc_agent (pixel source), ppi_agent (lane monitor), ahb_agent (sequences for the Synopsys AHB VIP)
+  uvc/agent_top/         dc_agent (pixel source), ppi_agent (lane monitor), ahb_agent (AHB register sequences, plus an AHB master agent used with AHB=own)
   uvm_tb/                env, scoreboard and tests
   bin/                   Makefile and tool setup
 ```
@@ -52,8 +52,38 @@ The long packet is `AA FF | DI WC(2) ECC | payload (WC bytes) | CRC(2) FF BB`.
 
 - `dc_agent` drives frames of random or fixed pixels with configurable VSYNC/HSYNC widths and resolution (NORMAL 10x3, VGA, HD, Full HD).
 - `ppi_agent` samples the four lanes; the scoreboard rebuilds packets from the lane bytes, checks the framing bytes, recovers the pixels and compares them with what the DC side sent. Pixels left uncompared at the end of a test are reported as errors.
-- The registers are programmed through the Synopsys AHB VIP master, which also checks AHB protocol rules.
+- The DSI registers are programmed over AHB, by either the Synopsys AHB VIP or the testbench's own AHB agent (see the next section).
+- The register tests write a register, read it back and check that the value matches.
 - Functional coverage: `dc_cg` and `ppi_cg` covergroups in the scoreboard. Assertion coverage through `-cm assert`.
+
+## Choosing the AHB master: VIP or own agent
+
+The testbench has two AHB masters. You pick one with `AHB=` on the `make` command line; the default is the VIP.
+
+| | `AHB=vip` (default) | `AHB=own` |
+|---|---|---|
+| AHB master | Synopsys AMBA AHB VIP (`svt_ahb_system_env`) | `ahb_agent`: `ahb_driver`, `ahb_monitor`, `ahb_seqr` |
+| Protocol checking | VIP built-in checkers | `ahb_monitor`: HRESP must be OKAY, HRDATA/HWDATA/HADDR must not be X/Z, word transfers must be aligned |
+| Transfers | VIP issues them back to back | single NONSEQ word transfers, one idle cycle between them |
+| Needs the Synopsys VIP | yes | no (VCS only) |
+
+Everything else is shared: DUT, `dc_agent`, `ppi_agent`, scoreboard, coverage, sequences and all 27 tests. The sequences call `write_reg()` / `read_reg()` in `ahb_seqs.sv`, which issue a VIP or an `ahb_xtn` transaction depending on the build, and every test starts them on `e_h.ahb_sqr`.
+
+```
+cd VERIFY/bin
+make regress SEED=1                     # VIP (default)
+make regress SEED=1 AHB=vip             # VIP, stated explicitly
+make regress SEED=1 AHB=own             # own AHB agent
+make run UVM_TEST=lane_3_test AHB=own   # one test
+make run_test25 AHB=own                 # numbered targets take it too
+```
+
+- The choice is made at compile time: `AHB=own` compiles with `+define+MIPI_OWN_AHB`, and only one master is built into `simv`.
+- Switching is automatic. `make compile` records which master it built (`VERIFY/bin/.ahb_build`), and `make run` recompiles first if you ask for the other one.
+- To see which master the current build uses: `make info` prints `AHB = vip` or `AHB = own`. In a test log, the UVM topology lists `ahb_agth` as `svt_ahb_system_env` (VIP) or `ahb_agent` (own).
+- Any value other than `vip` or `own` stops with an error.
+
+Files of the own agent, all in `VERIFY/uvc/agent_top/ahb_agent/`: `ahb_if.sv`, `ahb_xtn.sv`, `ahb_cfg.sv`, `ahb_seqr.sv`, `ahb_driver.sv`, `ahb_monitor.sv`, `ahb_agent.sv`. The register sequences shared by both masters are in `ahb_seqs.sv` in the same directory.
 
 ## Requirements and setup
 
@@ -63,10 +93,12 @@ The testbench needs licensed Synopsys tools. Nothing from them is included in th
 |---|---|---|
 | VCS (with UVM 1.2) | R-2020.12-SP2 | `VCS_HOME` |
 | Verdi (waveforms, GUI) | R-2020.12-SP2 | `VERDI_HOME` |
-| VC VIP, AMBA AHB | V-2023.12 | `DESIGNWARE_HOME`, `VIP_VERSION` |
+| VC VIP, AMBA AHB (only for AHB=vip) | V-2023.12 | `DESIGNWARE_HOME`, `VIP_VERSION` |
 | Licence server | | `SNPSLMD_LICENSE_FILE` |
 
-The AHB master is the Synopsys AMBA VIP, so the testbench does not compile without it. On the first `make compile` the Makefile runs `dw_vip_setup` from `$DESIGNWARE_HOME/bin` to generate the VIP model directory in `VERIFY/bin/vip/` (ignored by git).
+With the default `AHB=vip` the testbench needs the Synopsys AMBA VIP. On the first `make compile` the Makefile runs `dw_vip_setup` from `$DESIGNWARE_HOME/bin` to generate the VIP model directory in `VERIFY/bin/vip/` (ignored by git).
+
+With `AHB=own` the VIP is not used at all, so only VCS (and Verdi for waveforms) is needed.
 
 The defaults point to `/tools/synopsys/...` and a licence server on port 27000 of the local host. If your install is elsewhere, set the variables in your environment or on the command line:
 
@@ -84,12 +116,24 @@ Other VCS and VIP versions should work but have not been tried.
 
 ```
 cd VERIFY/bin
-make compile                       # first run also generates the AHB VIP model dir (make vip)
+make compile                       # first run with AHB=vip also generates the VIP model dir (make vip)
 make run UVM_TEST=lane_3_test SEED=1
 make regress SEED=1                # all 27 tests, one log per test in logs/
+make regress SEED=1 AHB=own        # same tests with the own AHB agent
 make run UVM_TEST=lane_0_test GUI=1   # Verdi
 make help                          # all targets and tests
 ```
+
+| Option | Values | Default |
+|---|---|---|
+| `UVM_TEST` | test class name | `mipi_test` |
+| `SEED` | `random` or a number | `random` |
+| `AHB` | `vip` or `own` | `vip` |
+| `GUI` | `1` opens Verdi | `0` |
+| `DUMP` | `1` writes `mydump.fsdb` | `1` (`0` for the VGA/HD/Full HD tests) |
+| `VERBOSITY` | UVM verbosity | `UVM_MEDIUM` (`UVM_LOW` for the VGA/HD/Full HD tests) |
+
+Logs go to `VERIFY/bin/logs/<test>.log` and waveforms to `VERIFY/bin/mydump.fsdb` (overwritten by each run). Open a waveform with `verdi -ssf mydump.fsdb`.
 
 The VGA, HD and Full HD tests move millions of pixels, so they run with per-pixel messages and the FSDB dump turned off. Use `VERBOSITY=UVM_MEDIUM DUMP=1` to turn them back on.
 

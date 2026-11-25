@@ -56,7 +56,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 //phase.raise_objection(this);
 //fork
-//ahb_sqsh.start(e_h.ahb_agth.master[0].sequencer);
+//ahb_sqsh.start(e_h.ahb_sqr);
 //dc_sqsh.start(e_h.dc_agth.dc_sqrh);
 //join
 //#1000;
@@ -87,7 +87,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l0.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l0.start(e_h.ahb_sqr);
 dc_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -118,7 +118,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l1.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l1.start(e_h.ahb_sqr);
 dc_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -149,7 +149,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l2.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l2.start(e_h.ahb_sqr);
 dc_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -180,7 +180,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 dc_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -211,7 +211,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh.start(e_h.ahb_sqr);
 dsi_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -242,7 +242,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 f10_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -273,7 +273,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 vrand_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -304,7 +304,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 v5_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -335,7 +335,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 v10_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -366,7 +366,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 pixrand_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -397,7 +397,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 white_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -428,7 +428,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 black_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -459,7 +459,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 red_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -490,7 +490,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 green_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -521,7 +521,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 blue_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -552,7 +552,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 pixlow_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -583,7 +583,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 pixhigh_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -615,7 +615,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 resrand_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #10000;  // last line needs ~5us on 4 lanes at FULL_HD
@@ -646,7 +646,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 resnml_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #1000;
@@ -678,7 +678,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 reshd_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #10000;  // last line needs ~5us on 4 lanes at FULL_HD
@@ -710,7 +710,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 resfhd_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #10000;  // last line needs ~5us on 4 lanes at FULL_HD
@@ -742,7 +742,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_sqsh_l3.start(e_h.ahb_agth.master[0].sequencer);
+ahb_sqsh_l3.start(e_h.ahb_sqr);
 resvga_sqsh.start(e_h.dc_agth.dc_sqrh);
 join
 #10000;  // last line needs ~5us on 4 lanes at FULL_HD
@@ -771,7 +771,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_seqsh.start(e_h.ahb_agth.master[0].sequencer);
+ahb_seqsh.start(e_h.ahb_sqr);
 join
 #1000;
 phase.drop_objection(this);
@@ -799,7 +799,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_seqsh.start(e_h.ahb_agth.master[0].sequencer);
+ahb_seqsh.start(e_h.ahb_sqr);
 join
 #1000;
 phase.drop_objection(this);
@@ -827,7 +827,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_seqsh.start(e_h.ahb_agth.master[0].sequencer);
+ahb_seqsh.start(e_h.ahb_sqr);
 join
 #1000;
 phase.drop_objection(this);
@@ -855,7 +855,7 @@ task run_phase(uvm_phase phase);
 super.run_phase(phase);
 phase.raise_objection(this);
 fork
-ahb_seqsh.start(e_h.ahb_agth.master[0].sequencer);
+ahb_seqsh.start(e_h.ahb_sqr);
 join
 #1000;
 phase.drop_objection(this);

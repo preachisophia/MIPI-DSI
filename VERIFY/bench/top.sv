@@ -1,15 +1,24 @@
+// AHB master is chosen at compile time:
+//   default            : Synopsys AHB VIP (make AHB=vip)
+//   +define+MIPI_OWN_AHB : testbench's own ahb_agent (make AHB=own)
+`ifndef MIPI_OWN_AHB
 `include "svt_ahb_if.svi"
+`endif
 `include "uvm_pkg.sv"
+`ifndef MIPI_OWN_AHB
 `include "svt_ahb.uvm.pkg"
 `include "svt_ahb_port_defines.svi"
+`endif
 
 module top;
 
 import uvm_pkg::*;
+`ifndef MIPI_OWN_AHB
 /** Import the SVT UVM Package */
 import svt_uvm_pkg::*;
 /** Import the AHB VIP */
 import svt_ahb_uvm_pkg::*;
+`endif
 
 //MIPI PACKAGE
 import mipi_pkg::*;
@@ -32,6 +41,10 @@ hrstn<=0;
 hrstn<=1;
 end
 
+`ifdef MIPI_OWN_AHB
+/** Own AHB agent interface */
+ahb_if a_if(h_clk, hrstn);
+`else
 /** VIP Interface instance representing the AHB system */
 svt_ahb_if h_if();
 assign h_if.hclk = h_clk;
@@ -39,15 +52,29 @@ assign h_if.hclk = h_clk;
 assign h_if.hresetn =hrstn;
 
 assign h_if.master_if[0].hgrant =1;
+`endif
 
 dc_if  d_if(h_clk);
 ppi_if p_if();
 
 //DUT INSTANTIATION
 dsi #(1920,1080) DUT  // FRAME_LENGTH = widest line (FULL_HD) 
-  	 (.haddr(h_if.master_if[0].haddr),
-  	  .hwrite(h_if.master_if[0].hwrite), 
-          .hsize(h_if.master_if[0].hsize),   
+  	 (
+`ifdef MIPI_OWN_AHB
+          .haddr(a_if.haddr),
+          .hwrite(a_if.hwrite),
+          .hsize(a_if.hsize),
+          .hburst(a_if.hburst),
+          .htrans(a_if.htrans),
+          .hwdata(a_if.hwdata),
+          .hprot(a_if.hprot),
+          .hresp(a_if.hresp),
+          .hready(a_if.hready),
+          .hrdata(a_if.hrdata),
+`else
+          .haddr(h_if.master_if[0].haddr),
+  	  .hwrite(h_if.master_if[0].hwrite),
+          .hsize(h_if.master_if[0].hsize),
           .hburst(h_if.master_if[0].hburst),
           .htrans(h_if.master_if[0].htrans),
           .hwdata(h_if.master_if[0].hwdata),
@@ -55,7 +82,8 @@ dsi #(1920,1080) DUT  // FRAME_LENGTH = widest line (FULL_HD)
           .hresp(h_if.hresp_bus),
   	  .hready(h_if.hready_bus),
 	  .hrdata(h_if.hrdata_bus),
-           
+`endif
+
           .pixel_data(d_if.pixel_data),
   	  .data_valid(d_if.data_valid),
           .hsync(d_if.hsync),
@@ -76,7 +104,11 @@ dsi #(1920,1080) DUT  // FRAME_LENGTH = widest line (FULL_HD)
 			
 initial
 begin
+`ifdef MIPI_OWN_AHB
+uvm_config_db#(virtual ahb_if)::set(null,"*","ahb_if",a_if);
+`else
 uvm_config_db#(virtual svt_ahb_if)::set(null,"*","vif",h_if);
+`endif
 uvm_config_db#(virtual dc_if)::set(null,"*","dc_if",d_if);
 uvm_config_db#(virtual ppi_if)::set(null,"*","ppi_if",p_if);
 run_test();

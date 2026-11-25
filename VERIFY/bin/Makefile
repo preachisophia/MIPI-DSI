@@ -39,6 +39,12 @@ export PATH := $(VCS_HOME)/bin:$(VERDI_HOME)/bin:$(PATH)
 UVM_TEST ?= mipi_test
 SEED     ?= random
 GUI      ?= 0
+# AHB master: vip = Synopsys AHB VIP (default), own = the testbench's own ahb_agent
+AHB      ?= vip
+
+ifeq ($(filter $(AHB),vip own),)
+    $(error AHB must be vip or own (got '$(AHB)'))
+endif
 
 #-------------------------------------------------------------------------------
 # SEED
@@ -167,6 +173,9 @@ TB_COMPILE_OPTS += +incdir+$(TB_HOME)/uvc/agent_top/ppi_agent
 #-------------------------------------------------------------------------------
 
 TB_COMPILE_OPTS += $(TB_HOME)/uvc/agent_top/dc_agent/dc_if.sv
+ifeq ($(AHB),own)
+TB_COMPILE_OPTS += $(TB_HOME)/uvc/agent_top/ahb_agent/ahb_if.sv
+endif
 TB_COMPILE_OPTS += $(TB_HOME)/uvc/agent_top/ppi_agent/ppi_if.sv
 
 #-------------------------------------------------------------------------------
@@ -220,7 +229,9 @@ COMMON_RUN_OPTS += -cm assert
 help:
 	@echo ""
 	@echo "MIPI DSI VCS/UVM Makefile"
-	@echo "Usage: make <target> [GIT_HOME=/path/to/repo] [SEED=random|number]"
+	@echo "Usage: make <target> [GIT_HOME=/path/to/repo] [SEED=random|number] [AHB=vip|own]"
+	@echo "       AHB=vip  Synopsys AHB VIP master (default)"
+	@echo "       AHB=own  testbench's own AHB agent, no VIP needed"
 	@echo ""
 	@echo "General targets:"
 	@echo "  make compile        Compile RTL + UVM testbench"
@@ -275,6 +286,7 @@ info:
 	@echo "LICENSE   = $(SNPSLMD_LICENSE_FILE)"
 	@echo "UVM_TEST  = $(UVM_TEST)"
 	@echo "SEED      = $(SEED)"
+	@echo "AHB       = $(AHB)"
 	@echo "COVERAGE  = SystemVerilog Functional + Assertion"
 	@echo "----------------------------------------------------"
 
@@ -288,19 +300,33 @@ $(VIP_DIR)/include/sverilog/svt_source_defines.svi:
 	  exit 1; }
 	$(DESIGNWARE_HOME)/bin/dw_vip_setup -path $(VIP_DIR) -add ahb_system_env_svt -svlog
 
-compile: vip
+# AHB=vip compiles the Synopsys VIP; AHB=own compiles ahb_agent and needs no VIP
+ifeq ($(AHB),own)
+AHB_DEPS         =
+AHB_COMPILE_OPTS = +define+MIPI_OWN_AHB
+else
+AHB_DEPS         = vip
+AHB_COMPILE_OPTS = $(VIP_COMPILE_OPTS)
+endif
+
+compile: $(AHB_DEPS)
 	@mkdir -p logs
-	@rm -f logs/compile.log
+	@rm -f logs/compile.log .ahb_build
 	vcs $(COMMON_COMPILE_OPTS) \
-	    $(VIP_COMPILE_OPTS) \
+	    $(AHB_COMPILE_OPTS) \
 	    $(RTL_COMPILE_OPTS) \
 	    $(TB_COMPILE_OPTS)
+	@echo $(AHB) > .ahb_build
 
 # Run one test. Each test writes to a separate log and shares the coverage database.
+# simv is rebuilt when it is missing, built elsewhere, or built for the other AHB master.
 run:
 	@if [ ! -x ./simv ] || ldd ./simv | grep -q 'not found'; then \
 	  echo "simv missing or built elsewhere (unresolved shared libraries) - recompiling"; \
 	  rm -rf simv simv.daidir csrc partitionlib; \
+	  $(MAKE) --no-print-directory compile; \
+	elif [ "`cat .ahb_build 2>/dev/null`" != "$(AHB)" ]; then \
+	  echo "simv was not built for AHB=$(AHB) - recompiling"; \
 	  $(MAKE) --no-print-directory compile; \
 	fi
 	@mkdir -p logs
@@ -417,7 +443,7 @@ cov:
 all: clean compile run report
 
 clean:
-	rm -rf simv simv.daidir csrc partitionlib logs
+	rm -rf simv simv.daidir csrc partitionlib logs .ahb_build
 	rm -rf mipi_cov* mipi_urg_report* verdiLog DVEfiles
 	rm -rf novas*gg ucli.key *.fsdb *.vpd *.log *.key *.vdb
 	rm -rf diag_dir vc_hdrs.h vdCovLog verdi_config_file

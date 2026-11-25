@@ -164,6 +164,10 @@ The Full HD test compares 4,147,200 pixels (1920 x 1080, 2 frames). The logs and
 
 Verdi nWave views of the `SEED=1` runs.
 
+**One full line, DC input to PPI output** (`lane_0_test`, one lane, 255-695 ns). On the DC side (`pixel_data`) the line's 10 pixels go in: `05ebf6`, `cf059a`, `d6905b`, ..., `2bb680` (cursor on the first one). After `fifo_done` and `packet_done`, lane 0 (`ppi_data_lane0`) sends the line as three short packets `cc ff 3e fe ca 32 ff dd`, then the long packet `aa ff 3e 1e 00 32` (DI 0x3E, WC 30 bytes, ECC 0x32), the payload `05 eb f6 cf 05 9a d6 90 5b ... 2b b6 80` (marker on the first byte), CRC `18 7d`, trailer `ff bb`, and a closing short packet. The payload bytes are the same pixel values as the input, MSB first.
+
+![Full line from DC input to PPI lane 0](screenshots/07_full_line_dc_to_ppi.png)
+
 **AHB register write and read-back, Synopsys VIP** (`ahb_dsilngreg_test`, `AHB=vip`). The VIP writes `0x3c` to `dsi_lng` (0x4000_0008) and reads it straight back; the two transfers are back to back (HTRANS = NONSEQ from 25 to 45 ns) and HRDATA returns `0x3c` at the cursor.
 
 ![AHB write and read-back with the VIP](screenshots/01_ahb_vip_write_readback.png)

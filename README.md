@@ -168,6 +168,23 @@ Verdi nWave views of the `SEED=1` runs.
 
 ![Full line from DC input to PPI lane 0](screenshots/07_full_line_dc_to_ppi.png)
 
+**The same line on all four lanes** (`lane_3_test`, 255-480 ns). The 10 input pixels are the same as above. With 4 lanes enabled the bytes go out round-robin, byte 0 on lane 0, byte 1 on lane 1 and so on, four bytes per clock:
+
+| Time | lane 0 | lane 1 | lane 2 | lane 3 |
+|---|---|---|---|---|
+| 399-419 ns | `cc` / `ca` | `ff` / `32` | `3e` / `ff` | `fe` / `dd` (three short packets) |
+| 423 ns | `aa` | `ff` | `3e` | `1e` |
+| 427 ns (marker) | `00` | `32` | `05` | `eb` |
+| 431 ns | `f6` | `cf` | `05` | `9a` |
+| 435 ns | `d6` | `90` | `5b` | `b9` |
+| ... | | | | |
+| 455 ns | `04` | `2b` | `b6` | `80` |
+| 459 ns | `18` | `7d` | `ff` | `bb` (CRC and trailer) |
+
+So the first pixel `05ebf6` is sent as `05` `eb` on lanes 2 and 3 and `f6` on lane 0 in the next clock, and the last pixel `2bb680` ends on lane 3 at 455 ns. Lane 2 shows one wide `05` from 427 to 435 ns because it carries `05` in two clocks in a row. A closing short packet follows on all four lanes.
+
+![Full line from DC input to all four PPI lanes](screenshots/08_full_line_dc_to_4_lanes.png)
+
 **AHB register write and read-back, Synopsys VIP** (`ahb_dsilngreg_test`, `AHB=vip`). The VIP writes `0x3c` to `dsi_lng` (0x4000_0008) and reads it straight back; the two transfers are back to back (HTRANS = NONSEQ from 25 to 45 ns) and HRDATA returns `0x3c` at the cursor.
 
 ![AHB write and read-back with the VIP](screenshots/01_ahb_vip_write_readback.png)

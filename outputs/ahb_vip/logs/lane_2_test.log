@@ -1,0 +1,1637 @@
+Command: /home/sophia/MIPI-DSI-github/VERIFY/bin/./simv +UVM_TESTNAME=lane_2_test +ntb_random_seed=1 +UVM_NO_RELNOTES +print_uvm_hier +UVM_VERBOSITY=UVM_MEDIUM +ENABLE_DUMP -cm assert -l ./logs/lane_2_test.log -cm_dir ./mipi_cov.vdb
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2_Full64; Runtime version R-2020.12-SP2_Full64;  Nov 25 12:07 2026
+UVM_INFO @ 0: reporter [RNTST] Running test lane_2_test...
+*Verdi* Loading libsscore_vcs202012.so
+FSDB Dumper for VCS, Release Verdi_R-2020.12-SP2, Linux x86_64/64bit, 05/23/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file './mydump.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VCS-SV simulation.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SVT, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] DESIGNWARE_HOME@compile: /tools/synopsys/vc-vip_vV-2023.12/.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(5754) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(308) @ 0: uvm_test_top.e_h.ahb_agth [build_phase] VIP Interface hierarchy = top.h_if
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_agent_svt/sverilog/src/vcs/svt_ahb_master_agent.svp(272) @ 0: uvm_test_top.e_h.ahb_agth.master[0] [build_phase] VIP Interface hierarchy = top.h_if.master_if[0]
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(749) @ 0: uvm_test_top.e_h.ahb_agth [end_of_elaboration_phase] *************** AHB System Configuration ***************
+----------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                                      Type                                 Size  Value                    
+----------------------------------------------------------------------------------------------------------------------------------------------
+ahb_cfg                                                                   svt_ahb_system_configuration         -     @886                     
+  bus_cfg                                                                 object                               -     <null>                   
+  master_cfg                                                              da(object)                           1     -                        
+    [0]                                                                   svt_ahb_master_configuration         -     @1058                    
+      slave_addr_ranges                                                   da(object)                           0     -                        
+      dest_addr_mappers                                                   da(object)                           0     -                        
+      source_addr_mappers                                                 da(object)                           0     -                        
+      sys_cfg                                                             svt_ahb_system_configuration         -     @693                     
+      inst                                                                string                               9     master[0]                
+      no_dut                                                              integral                             1     'b0                      
+      no_dut_xact_limit                                                   integral                             32    'd100                    
+      enable_signal_callbacks                                             integral                             1     'b0                      
+      enable_sled                                                         integral                             1     'b0                      
+      enable_runtime_trace_recording                                      integral                             1     'b0                      
+      filter_psdisplay_short                                              qda                                  0     -                        
+      pa_format_type                                                      svt_xml_writer::format_type_enum     32    FSDB                     
+      data_idle_value                                                     idle_val_enum                        32    INACTIVE_X_VAL           
+      data_busy_value                                                     busy_val_enum                        32    INACTIVE_PREV_VALUE      
+      control_idle_value                                                  idle_val_enum                        32    INACTIVE_LOW_VAL         
+      addr_idle_value                                                     idle_val_enum                        32    INACTIVE_LOW_VAL         
+      invariant_mode                                                      invariant_mode_enum                  32    NO_INVARIANT             
+      ahb_interface_type                                                  ahb_interface_type_enum              32    AHB                      
+      perf_inactivity_algorithm_type                                      perf_inactivity_algorithm_type_enum  32    EXCLUDE_ALL              
+      port_id                                                             integral                             32    'd0                      
+      amba_system_port_id                                                 integral                             32    -1                       
+      initialize_output_signals_at_start                                  integral                             1     'b0                      
+      nseq_during_last_beat_second_cycle_error                            integral                             1     'b0                      
+      is_active                                                           integral                             1     'b1                      
+      silent_mode                                                         integral                             1     'b0                      
+      signal_valid_during_reset_checks_enable                             integral                             1     'b1                      
+      retain_data_bus_val                                                 integral                             1     'b1                      
+      enable_xml_gen                                                      integral                             1     'b0                      
+      control_huser_enable                                                integral                             1     'b0                      
+      extended_mem_enable                                                 integral                             1     'b0                      
+      secure_enable                                                       integral                             1     'b0                      
+      enable_ebt_for_incr                                                 integral                             1     'b1                      
+      data_huser_enable                                                   integral                             1     'b0                      
+      end_incr_with_busy                                                  integral                             1     'b0                      
+      wait_state_timeout                                                  integral                             32    'd0                      
+      xact_timeout                                                        integral                             32    'd0                      
+      split_state_timeout                                                 integral                             32    'd0                      
+      addr_width                                                          integral                             32    'd32                     
+      log_base_2_data_width                                               integral                             32    'd0                      
+      data_width                                                          integral                             32    'd32                     
+      control_huser_width                                                 integral                             32    'd32                     
+      data_huser_width                                                    integral                             32    'd64                     
+      combine_unaligned_transfer_beat_values                              integral                             1     'b1                      
+      use_tlm_generic_payload                                             integral                             1     'b0                      
+      use_pv_socket                                                       integral                             1     'b0                      
+      enable_tracing                                                      integral                             1     'b0                      
+      enable_reporting                                                    integral                             1     'b0                      
+      protocol_checks_enable                                              integral                             1     'b1                      
+      protocol_checks_coverage_enable                                     integral                             1     'b0                      
+      pass_check_cov                                                      integral                             1     'b1                      
+      toggle_coverage_enable                                              integral                             1     'b0                      
+      state_coverage_enable                                               integral                             1     'b0                      
+      transaction_coverage_enable                                         integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_burst_with_busy_enable                              integral                             1     'b1                      
+      trans_cross_ahb_hburst_num_wait_cycles_enable                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hresp_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot0_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot1_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot2_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot4_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot5_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot6_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hnonsec_enable                               integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_hburst_hsize_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_enable                                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_page_boundary_size_enable                           integral                             1     'b1                      
+      trans_cross_ahb_size_addr_align_enable                              integral                             1     'b1                      
+      trans_cross_ahb_burst_incr_number_of_beats_enable                   integral                             1     'b1                      
+      trans_cross_ahb_burst_wrapped_addr_boundary_enable                  integral                             1     'b1                      
+      trans_cross_ahb_num_busy_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_num_wait_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_htrans_xact_enable                                  integral                             1     'b1                      
+      trans_ahb_hmaster_enable                                            integral                             1     'b1                      
+      trans_ahb_hready_in_when_hsel_high_enable                           integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_enable                              integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_ahb_lite_enable                     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_full_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_lite_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_full_enable     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_lite_enable     integral                             1     'b1                      
+      trans_ahb_idle_to_nseq_hready_low_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_cov_diff_xact_ahb_full_enable                      integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_lite_enable                            integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_full_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_enable                       integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_hready_enable                integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_enable                        integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_hready_enable                 integral                             1     'b1                      
+      trans_ahb_hburst_transition_enable                                  integral                             1     'b1                      
+      perf_exclude_inactive_periods_for_throughput                        integral                             1     'b0                      
+      display_xact_phase_messages                                         integral                             1     'b0                      
+      trace_file_name                                                     string                               0     ""                       
+      perf_recording_interval                                             real                                 64    0.000000                 
+      perf_max_write_xact_latency                                         real                                 64    -1.000000                
+      perf_min_write_xact_latency                                         real                                 64    -1.000000                
+      perf_avg_max_write_xact_latency                                     real                                 64    -1.000000                
+      perf_avg_min_write_xact_latency                                     real                                 64    -1.000000                
+      perf_max_read_xact_latency                                          real                                 64    -1.000000                
+      perf_min_read_xact_latency                                          real                                 64    -1.000000                
+      perf_avg_max_read_xact_latency                                      real                                 64    -1.000000                
+      perf_avg_min_read_xact_latency                                      real                                 64    -1.000000                
+      perf_max_read_throughput                                            real                                 64    -1.000000                
+      perf_min_read_throughput                                            real                                 64    -1.000000                
+      perf_max_write_throughput                                           real                                 64    -1.000000                
+      perf_min_write_throughput                                           real                                 64    -1.000000                
+      max_retries                                                         integral                             32    -1                       
+      drive_z_before_grant                                                integral                             1     'b0                      
+      assert_hbusreq_for_one_cycle_after_bus_ownership_granted            integral                             1     'b0                      
+      generate_hbstrb_and_hunalign                                        integral                             1     'b0                      
+      drive_addr_ctrl_signals_along_with_busreq_assertion                 integral                             1     'b0                      
+      nseq_in_second_cycle_error_response_for_single_burst                integral                             1     'b0                      
+      allow_both_continue_and_abort_on_error_resp_policy                  integral                             1     'b0                      
+      busy_ignore_waits                                                   integral                             1     'b0                      
+      rebuild_burst_type                                                  rebuild_burst_type_enum              32    REBUILD_BURST_TYPE_INCR  
+      uvm_reg_enable                                                      integral                             1     'b0                      
+  slave_cfg                                                               da(object)                           0     -                        
+  slave_addr_ranges                                                       da(object)                           0     -                        
+  inst                                                                    string                               25    uvm_test_top.e_h.ahb_agth
+  no_dut                                                                  integral                             1     'b0                      
+  no_dut_xact_limit                                                       integral                             32    'd100                    
+  enable_signal_callbacks                                                 integral                             1     'b0                      
+  enable_sled                                                             integral                             1     'b0                      
+  enable_runtime_trace_recording                                          integral                             1     'b0                      
+  filter_psdisplay_short                                                  qda                                  0     -                        
+  system_id                                                               integral                             32    'd0                      
+  common_clock_mode                                                       integral                             1     'b1                      
+  common_reset_mode                                                       integral                             1     'b1                      
+  num_masters                                                             integral                             32    'd1                      
+  num_slaves                                                              integral                             32    'd0                      
+  participating_masters                                                   qda                                  0     -                        
+  participating_slaves                                                    qda                                  0     -                        
+  use_bus                                                                 integral                             1     'b0                      
+  system_monitor_enable                                                   integral                             1     'b0                      
+  system_coverage_enable                                                  integral                             1     'b1                      
+  system_ahb_all_masters_grant_enable                                     integral                             1     'b1                      
+  system_ahb_all_masters_busreq_enable                                    integral                             1     'b1                      
+  system_ahb_cross_all_masters_busreq_grant_enable                        integral                             1     'b1                      
+  system_ahb_all_slaves_selected_enable                                   integral                             1     'b1                      
+  system_ahb_slaves_selection_sequence_enable                             integral                             1     'b1                      
+  protocol_checks_coverage_enable                                         integral                             1     'b0                      
+  pass_check_cov                                                          integral                             1     'b1                      
+  display_summary_report                                                  integral                             1     'b0                      
+  display_perf_summary_report                                             integral                             1     'b0                      
+  ahb3                                                                    integral                             1     'b0                      
+  ahb5                                                                    integral                             1     'b0                      
+  count_busy_only_during_hready_high                                      integral                             1     'b0                      
+  ahb_lite                                                                integral                             1     'b0                      
+  ahb_lite_multilayer                                                     integral                             1     'b0                      
+  allow_slaves_with_overlapping_addr                                      integral                             1     'b0                      
+  disable_locked_transaction_support                                      integral                             1     'b0                      
+  little_endian                                                           integral                             1     'b1                      
+  default_master                                                          integral                             32    'd0                      
+  dummy_master                                                            integral                             32    'd0                      
+  error_response_policy                                                   error_response_policy_enum           32    ABORT_ON_ERROR           
+  master_error_response_policy                                            qda                                  0     -                        
+  default_slave                                                           integral                             32    -1                       
+  default_slave_resp_check                                                integral                             1     'b0                      
+  decoder_hsel_assert_check                                               integral                             1     'b0                      
+  max_num_rebuild_attempts_on_retry_resp                                  integral                             32    -1                       
+  enable_complex_memory_map                                               integral                             1     'b0                      
+  multi_hsel_enable                                                       qda                                  0     -                        
+  multi_hsel_width                                                        qda                                  0     -                        
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------
+Name                                         Type                                  Size  Value
+----------------------------------------------------------------------------------------------
+uvm_test_top                                 lane_2_test                           -     @635 
+  e_h                                        env                                   -     @672 
+    ahb_agth                                 svt_ahb_system_env                    -     @842 
+      master[0]                              svt_ahb_master_agent                  -     @1205
+        driver                               svt_ahb_master                        -     @1562
+          rsp_port                           uvm_analysis_port                     -     @1581
+          seq_item_port                      uvm_seq_item_pull_port                -     @1571
+          cfg                                svt_ahb_master_configuration          -     @1858
+        monitor                              svt_ahb_master_monitor                -     @1597
+          item_observed_port                 uvm_analysis_port                     -     @1610
+          item_observed_port_intercept       uvm_component                         -     @1620
+            m_export                         uvm_analysis_imp                      -     @1639
+            m_port                           uvm_analysis_port                     -     @1629
+          tlm_generic_payload_observed_port  uvm_analysis_port                     -     @1650
+          cfg                                svt_ahb_master_configuration          -     @1869
+        sequencer                            svt_ahb_master_transaction_sequencer  -     @1397
+          rsp_export                         uvm_analysis_export                   -     @1406
+          seq_item_export                    uvm_seq_item_pull_imp                 -     @1524
+          tlm_gp_seq_item_port               uvm_seq_item_pull_port                -     @1551
+          vlog_cmd_put_export                uvm_blocking_put_imp                  -     @1541
+          cfg                                svt_ahb_master_configuration          -     @1993
+          arbitration_queue                  array                                 0     -    
+          lock_queue                         array                                 0     -    
+          num_last_reqs                      integral                              32    'd1  
+          num_last_rsps                      integral                              32    'd1  
+        cfg                                  svt_ahb_master_configuration          -     @1379
+      sequencer                              svt_ahb_system_sequencer              -     @1223
+        rsp_export                           uvm_analysis_export                   -     @1232
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @1350
+        cfg                                  svt_ahb_system_configuration          -     @693 
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+      cfg                                    svt_ahb_system_configuration          -     @886 
+    dc_agth                                  dc_agent                              -     @856 
+      dc_drvh                                dc_driver                             -     @2161
+        rsp_port                             uvm_analysis_port                     -     @2180
+        seq_item_port                        uvm_seq_item_pull_port                -     @2170
+      dc_monh                                dc_monitor                            -     @2015
+        dc_cov_port                          uvm_analysis_port                     -     @2201
+        dc_port                              uvm_analysis_port                     -     @2191
+      dc_sqrh                                dc_seqr                               -     @2024
+        rsp_export                           uvm_analysis_export                   -     @2033
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @2151
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+    ppi_agth                                 ppi_agent                             -     @865 
+      ppi_monh                               ppi_monitor                           -     @2223
+        ppi_port                             uvm_analysis_port                     -     @2232
+    sb_h                                     sb                                    -     @874 
+      dc_fifo                                uvm_tlm_analysis_fifo #(T)            -     @2243
+        analysis_export                      uvm_analysis_imp                      -     @2292
+        get_ap                               uvm_analysis_port                     -     @2282
+        get_peek_export                      uvm_get_peek_imp                      -     @2262
+        put_ap                               uvm_analysis_port                     -     @2272
+        put_export                           uvm_put_imp                           -     @2252
+      ppi_fifo                               uvm_tlm_analysis_fifo #(T)            -     @2302
+        analysis_export                      uvm_analysis_imp                      -     @2351
+        get_ap                               uvm_analysis_port                     -     @2341
+        get_peek_export                      uvm_get_peek_imp                      -     @2321
+        put_ap                               uvm_analysis_port                     -     @2331
+        put_export                           uvm_put_imp                           -     @2311
+----------------------------------------------------------------------------------------------
+
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_agent.svp(405) @ 1: uvm_test_top.e_h.ahb_agth.master[0] [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP License: VIP-AMBA-AHB-SVT
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_env.svp(719) @ 1: uvm_test_top.e_h.ahb_agth [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP License: VIP-AMBA-AHB-SVT
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 5: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d0) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000000) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 5: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 5: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 15: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 15: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 15: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d1) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000004) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 25: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 25: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 25: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d2) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 35: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 35: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 35: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d0) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000000) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 35: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d3) LOCK('b1) XACT_TYPE(WRITE) ADDR('h4000000c) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 45: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 45: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 45: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d1) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000004) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 45: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d4) LOCK('b1) XACT_TYPE(WRITE) ADDR('h40000010) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 55: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 55: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 55: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d2) LOCK('b0) XACT_TYPE(WRITE) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 65: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 65: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 65: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d3) LOCK('b1) XACT_TYPE(WRITE) ADDR('h4000000c) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 75: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 75: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 75: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d4) LOCK('b1) XACT_TYPE(WRITE) ADDR('h40000010) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 85: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 85: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 95: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 95: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 105: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 105: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 115: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 115: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 125: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 125: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 135: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 135: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 145: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 145: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 155: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 155: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 165: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 165: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 175: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 175: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 185: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 185: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 195: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 195: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 205: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 205: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 215: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 215: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 225: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 225: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 235: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 235: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 245: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 245: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 255: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 255: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 265: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 265: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 275: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=388086
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 275: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 5ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 285: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=13567386
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 285: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 295: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=14061659
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 295: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 305: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12160936
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 305: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 315: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=5340011
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 315: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 325: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=14624823
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 325: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 335: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=15666971
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 335: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 345: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=6573665
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 345: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 355: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7601156
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 355: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 365: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2864768
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 365: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 375: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 375: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 385: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 385: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 395: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 395: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 405: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 405: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 415: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 415: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 425: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 425: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 435: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 435: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 435: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 435: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 435: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 439: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 439: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 439: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 439: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 443: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = 05
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 443: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = eb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 443: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = f6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 443: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 05ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 443: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[1]
+DC Pixel = 05ebf6
+PPI Pixel = 05ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 443: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 445: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 445: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 447: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = cf
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 447: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = 05
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 447: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = 9a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 447: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 447: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[2]
+DC Pixel = cf059a
+PPI Pixel = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 447: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 451: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = d6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 451: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = 90
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 451: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = 5b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 451: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 451: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[3]
+DC Pixel = d6905b
+PPI Pixel = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 451: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 0
+pixel_data[0] = 05ebf6
+pixel_data[1] = cf059a
+pixel_data[2] = d6905b
+pixel_data[3] = b98fa8
+pixel_data[4] = 517b6b
+pixel_data[5] = df2837
+pixel_data[6] = ef0f1b
+pixel_data[7] = 644e61
+pixel_data[8] = 73fc04
+pixel_data[9] = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 455: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = b9
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 455: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = 8f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 455: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = a8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 455: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 455: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[4]
+DC Pixel = b98fa8
+PPI Pixel = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 455: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 455: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 455: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 459: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 51
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 459: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 7b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 459: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = 6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 459: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 459: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[5]
+DC Pixel = 517b6b
+PPI Pixel = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 459: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 463: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = df
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 463: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = 28
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 463: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 37
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 463: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 463: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[6]
+DC Pixel = df2837
+PPI Pixel = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 463: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 465: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 465: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 467: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 467: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = 0f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 467: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = 1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 467: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 467: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[7]
+DC Pixel = ef0f1b
+PPI Pixel = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 467: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 471: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = 64
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 471: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 4e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 471: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 471: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 471: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[8]
+DC Pixel = 644e61
+PPI Pixel = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 471: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 475: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = 73
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 475: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = fc
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 475: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = 04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 475: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 475: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[9]
+DC Pixel = 73fc04
+PPI Pixel = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 475: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 475: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 475: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 479: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 2b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 479: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = b6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 479: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = 80
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 479: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 479: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[10]
+DC Pixel = 2bb680
+PPI Pixel = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 479: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 479: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 479: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 485: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 485: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 495: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 495: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 505: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 505: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 515: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 515: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 525: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 525: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 535: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 535: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 545: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 545: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 555: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 555: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 565: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 565: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 575: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12078239
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 575: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 585: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=15180287
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 585: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 595: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=1945524
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 595: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 605: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3296620
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 605: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 615: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2759151
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 615: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 625: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12288565
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 625: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 635: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=5494203
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 635: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 645: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3688553
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 645: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 655: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7837613
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 655: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 665: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3987125
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 665: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 675: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 675: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 685: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 685: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 695: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 695: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 705: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 705: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 715: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 715: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 725: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 725: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 735: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 735: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 735: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 735: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 735: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 739: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 739: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 739: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 739: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 743: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = b8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 743: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = 4c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 743: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = 9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 743: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 743: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[11]
+DC Pixel = b84c9f
+PPI Pixel = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 743: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 745: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 745: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 747: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = e7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 747: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = a1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 747: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 747: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 747: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[12]
+DC Pixel = e7a1ff
+PPI Pixel = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 747: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 751: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = 1d
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 751: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = af
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 751: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = b4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 751: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 751: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[13]
+DC Pixel = 1dafb4
+PPI Pixel = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 751: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 1
+pixel_data[10] = b84c9f
+pixel_data[11] = e7a1ff
+pixel_data[12] = 1dafb4
+pixel_data[13] = 324d6c
+pixel_data[14] = 2a19ef
+pixel_data[15] = bb8235
+pixel_data[16] = 53d5bb
+pixel_data[17] = 384869
+pixel_data[18] = 7797ad
+pixel_data[19] = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 755: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 755: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = 4d
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 755: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = 6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 755: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 755: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[14]
+DC Pixel = 324d6c
+PPI Pixel = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 755: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 755: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 755: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 759: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 2a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 759: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 19
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 759: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 759: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 759: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[15]
+DC Pixel = 2a19ef
+PPI Pixel = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 759: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 763: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 763: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = 82
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 763: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 35
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 763: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 763: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[16]
+DC Pixel = bb8235
+PPI Pixel = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 763: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 765: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 765: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 767: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = 53
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 767: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = d5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 767: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 767: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 767: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[17]
+DC Pixel = 53d5bb
+PPI Pixel = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 767: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 771: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = 38
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 771: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 48
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 771: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 69
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 771: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 771: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[18]
+DC Pixel = 384869
+PPI Pixel = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 771: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 775: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = 77
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 775: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = 97
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 775: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 775: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 775: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[19]
+DC Pixel = 7797ad
+PPI Pixel = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 775: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 775: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 775: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 779: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 3c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 779: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = d6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 779: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 779: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 779: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[20]
+DC Pixel = 3cd6b5
+PPI Pixel = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 779: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 779: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 779: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 785: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 785: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 795: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 795: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 805: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 805: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 815: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 815: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 825: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 825: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 835: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 835: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 845: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 845: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 855: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 855: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 865: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 865: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 875: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8785903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 875: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 885: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8506267
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 885: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 895: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8711405
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 895: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 905: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8177923
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 905: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 915: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2636624
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 915: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 925: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7251736
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 925: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 935: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=16210018
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 935: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 945: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=11302294
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 945: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 955: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=16304801
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 955: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 965: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=6345952
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 965: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 975: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 975: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 985: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 985: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 995: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 995: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1005: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1005: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1015: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1015: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1025: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1025: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 1035: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 1035: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1035: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1035: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1035: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1039: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1039: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1039: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 1039: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1043: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = 86
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1043: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = 0f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1043: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1043: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1043: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[21]
+DC Pixel = 860fef
+PPI Pixel = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1043: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1045: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1045: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1047: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = 81
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1047: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = cb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1047: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = 9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1047: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1047: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[22]
+DC Pixel = 81cb9b
+PPI Pixel = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1047: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1051: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = 84
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1051: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = ec
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1051: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = ed
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1051: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1051: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[23]
+DC Pixel = 84eced
+PPI Pixel = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1051: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 2
+pixel_data[20] = 860fef
+pixel_data[21] = 81cb9b
+pixel_data[22] = 84eced
+pixel_data[23] = 7cc903
+pixel_data[24] = 283b50
+pixel_data[25] = 6ea718
+pixel_data[26] = f75862
+pixel_data[27] = ac7596
+pixel_data[28] = f8caa1
+pixel_data[29] = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1055: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = 7c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1055: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = c9
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1055: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = 03
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1055: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1055: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[24]
+DC Pixel = 7cc903
+PPI Pixel = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1055: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1055: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1055: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1059: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 28
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1059: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 3b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1059: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = 50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1059: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1059: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[25]
+DC Pixel = 283b50
+PPI Pixel = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1059: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1063: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = 6e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1063: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = a7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1063: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 18
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1063: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1063: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[26]
+DC Pixel = 6ea718
+PPI Pixel = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1063: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1065: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1065: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1067: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = f7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1067: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = 58
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1067: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = 62
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1067: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1067: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[27]
+DC Pixel = f75862
+PPI Pixel = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1067: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1071: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = ac
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1071: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 75
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1071: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 96
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1071: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1071: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[28]
+DC Pixel = ac7596
+PPI Pixel = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1071: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1075: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = f8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1075: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = ca
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1075: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = a1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1075: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1075: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[29]
+DC Pixel = f8caa1
+PPI Pixel = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1075: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1075: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1075: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1079: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 60
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1079: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = d4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1079: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1079: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1079: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[30]
+DC Pixel = 60d4e0
+PPI Pixel = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1079: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 1079: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 1079: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1085: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1085: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1095: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1095: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1105: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1105: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1115: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1115: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1125: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1125: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1135: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1135: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1145: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1145: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1155: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1155: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1165: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1165: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1175: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1175: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1185: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1185: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1195: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1195: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1205: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1205: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1215: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1215: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1225: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1225: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1235: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1235: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1245: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1245: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1255: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1255: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1265: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1265: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1275: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1275: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1285: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1285: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1295: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1295: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1305: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1305: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1315: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1315: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1325: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1325: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1335: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=388086
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1335: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 5ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1345: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=13567386
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1345: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1355: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=14061659
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1355: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1365: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12160936
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1365: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1375: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=5340011
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1375: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1385: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=14624823
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1385: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1395: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=15666971
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1395: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1405: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=6573665
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1405: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1415: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7601156
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1415: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1425: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2864768
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1425: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1435: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1435: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1445: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1445: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1455: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1455: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1465: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1465: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1475: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1475: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1485: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1485: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 1495: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 1495: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1495: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1495: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1495: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1499: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1499: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1499: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 1499: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1503: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = 05
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1503: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = eb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1503: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = f6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1503: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 05ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1503: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[31]
+DC Pixel = 05ebf6
+PPI Pixel = 05ebf6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1503: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1505: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1505: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1507: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = cf
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1507: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = 05
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1507: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = 9a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1507: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1507: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[32]
+DC Pixel = cf059a
+PPI Pixel = cf059a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1507: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1511: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = d6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1511: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = 90
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1511: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = 5b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1511: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1511: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[33]
+DC Pixel = d6905b
+PPI Pixel = d6905b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1511: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 0
+pixel_data[0] = 05ebf6
+pixel_data[1] = cf059a
+pixel_data[2] = d6905b
+pixel_data[3] = b98fa8
+pixel_data[4] = 517b6b
+pixel_data[5] = df2837
+pixel_data[6] = ef0f1b
+pixel_data[7] = 644e61
+pixel_data[8] = 73fc04
+pixel_data[9] = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1515: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = b9
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1515: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = 8f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1515: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = a8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1515: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1515: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[34]
+DC Pixel = b98fa8
+PPI Pixel = b98fa8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1515: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1515: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1515: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1519: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 51
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1519: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 7b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1519: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = 6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1519: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1519: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[35]
+DC Pixel = 517b6b
+PPI Pixel = 517b6b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1519: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1523: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = df
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1523: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = 28
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1523: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 37
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1523: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1523: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[36]
+DC Pixel = df2837
+PPI Pixel = df2837
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1523: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1525: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1525: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1527: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1527: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = 0f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1527: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = 1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1527: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1527: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[37]
+DC Pixel = ef0f1b
+PPI Pixel = ef0f1b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1527: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1531: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = 64
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1531: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 4e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1531: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1531: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1531: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[38]
+DC Pixel = 644e61
+PPI Pixel = 644e61
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1531: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1535: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = 73
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1535: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = fc
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1535: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = 04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1535: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1535: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[39]
+DC Pixel = 73fc04
+PPI Pixel = 73fc04
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1535: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1535: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1535: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1539: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 2b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1539: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = b6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1539: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = 80
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1539: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1539: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[40]
+DC Pixel = 2bb680
+PPI Pixel = 2bb680
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1539: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 1539: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 1539: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1545: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1545: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1555: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1555: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1565: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1565: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1575: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1575: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1585: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1585: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1595: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1595: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1605: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1605: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1615: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1615: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1625: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1625: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1635: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12078239
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1635: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1645: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=15180287
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1645: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1655: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=1945524
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1655: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1665: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3296620
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1665: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1675: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2759151
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1675: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1685: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=12288565
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1685: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1695: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=5494203
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1695: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1705: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3688553
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1705: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1715: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7837613
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1715: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1725: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=3987125
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1725: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1735: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1735: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1745: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1745: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1755: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1755: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1765: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1765: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1775: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1775: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1785: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1785: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 1795: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 1795: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1795: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1795: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1795: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1799: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1799: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 1799: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 1799: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1803: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = b8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1803: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = 4c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1803: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = 9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1803: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1803: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[41]
+DC Pixel = b84c9f
+PPI Pixel = b84c9f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1803: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1805: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1805: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1807: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = e7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1807: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = a1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1807: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1807: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1807: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[42]
+DC Pixel = e7a1ff
+PPI Pixel = e7a1ff
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1807: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1811: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = 1d
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1811: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = af
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1811: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = b4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1811: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1811: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[43]
+DC Pixel = 1dafb4
+PPI Pixel = 1dafb4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1811: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 1
+pixel_data[10] = b84c9f
+pixel_data[11] = e7a1ff
+pixel_data[12] = 1dafb4
+pixel_data[13] = 324d6c
+pixel_data[14] = 2a19ef
+pixel_data[15] = bb8235
+pixel_data[16] = 53d5bb
+pixel_data[17] = 384869
+pixel_data[18] = 7797ad
+pixel_data[19] = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1815: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1815: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = 4d
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1815: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = 6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1815: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1815: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[44]
+DC Pixel = 324d6c
+PPI Pixel = 324d6c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1815: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1815: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1815: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1819: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 2a
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1819: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 19
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1819: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1819: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1819: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[45]
+DC Pixel = 2a19ef
+PPI Pixel = 2a19ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1819: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1823: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1823: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = 82
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1823: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 35
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1823: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1823: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[46]
+DC Pixel = bb8235
+PPI Pixel = bb8235
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1823: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1825: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1825: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1827: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = 53
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1827: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = d5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1827: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1827: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1827: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[47]
+DC Pixel = 53d5bb
+PPI Pixel = 53d5bb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1827: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1831: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = 38
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1831: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 48
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1831: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 69
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1831: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1831: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[48]
+DC Pixel = 384869
+PPI Pixel = 384869
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1831: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1835: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = 77
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1835: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = 97
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1835: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1835: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1835: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[49]
+DC Pixel = 7797ad
+PPI Pixel = 7797ad
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1835: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1835: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1835: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1839: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 3c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1839: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = d6
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 1839: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 1839: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 1839: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[50]
+DC Pixel = 3cd6b5
+PPI Pixel = 3cd6b5
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 1839: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 1839: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 1839: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1845: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1845: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1855: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1855: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1865: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1865: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1875: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1875: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1885: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1885: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1895: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1895: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1905: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1905: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1915: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1915: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1925: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1925: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1935: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8785903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1935: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1945: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8506267
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1945: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1955: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8711405
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1955: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1965: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=8177923
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1965: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1975: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=2636624
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1975: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1985: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=7251736
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1985: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1995: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=16210018
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1995: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2005: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=11302294
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2005: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2015: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=16304801
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2015: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2025: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=6345952
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2025: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2035: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2035: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2045: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2045: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2055: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2055: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2065: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2065: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2075: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2075: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2085: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2085: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(158) @ 2095: uvm_test_top.e_h.sb_h [SB_PACKET] LONG PACKET START : AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(172) @ 2095: uvm_test_top.e_h.sb_h [SB_PACKET] FF after AA detected
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 2095: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[0] = 3e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2095: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2095: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 2099: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[1] = 1e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 2099: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[2] = 00
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(184) @ 2099: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER BYTE[3] = 32
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(192) @ 2099: uvm_test_top.e_h.sb_h [SB_HEADER] HEADER = 32001e3e WC = 30
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2103: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[0] = 86
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2103: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[1] = 0f
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2103: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[2] = ef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2103: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2103: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[51]
+DC Pixel = 860fef
+PPI Pixel = 860fef
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2103: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=9 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2105: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2105: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2107: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[3] = 81
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2107: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[4] = cb
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2107: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[5] = 9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2107: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2107: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[52]
+DC Pixel = 81cb9b
+PPI Pixel = 81cb9b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2107: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=8 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2111: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[6] = 84
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2111: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[7] = ec
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2111: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[8] = ed
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2111: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2111: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[53]
+DC Pixel = 84eced
+PPI Pixel = 84eced
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2111: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=7 PPI=0
+*********************** DC DRIVER ****************************
+---------------DC_DRV FOR LINES ALONE----------------------
+DRIVER_LINE NUMBER = 2
+pixel_data[20] = 860fef
+pixel_data[21] = 81cb9b
+pixel_data[22] = 84eced
+pixel_data[23] = 7cc903
+pixel_data[24] = 283b50
+pixel_data[25] = 6ea718
+pixel_data[26] = f75862
+pixel_data[27] = ac7596
+pixel_data[28] = f8caa1
+pixel_data[29] = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2115: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[9] = 7c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2115: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[10] = c9
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2115: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[11] = 03
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2115: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2115: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[54]
+DC Pixel = 7cc903
+PPI Pixel = 7cc903
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2115: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=6 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2115: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2115: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2119: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[12] = 28
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2119: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[13] = 3b
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2119: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[14] = 50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2119: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2119: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[55]
+DC Pixel = 283b50
+PPI Pixel = 283b50
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2119: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=5 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2123: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[15] = 6e
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2123: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[16] = a7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2123: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[17] = 18
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2123: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2123: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[56]
+DC Pixel = 6ea718
+PPI Pixel = 6ea718
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2123: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=4 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2125: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2125: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2127: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[18] = f7
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2127: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[19] = 58
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2127: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[20] = 62
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2127: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2127: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[57]
+DC Pixel = f75862
+PPI Pixel = f75862
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2127: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=3 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2131: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[21] = ac
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2131: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[22] = 75
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2131: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[23] = 96
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2131: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2131: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[58]
+DC Pixel = ac7596
+PPI Pixel = ac7596
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2131: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=2 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2135: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[24] = f8
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2135: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[25] = ca
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2135: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[26] = a1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2135: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2135: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[59]
+DC Pixel = f8caa1
+PPI Pixel = f8caa1
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2135: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=1 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2135: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2135: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2139: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[27] = 60
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2139: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[28] = d4
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(202) @ 2139: uvm_test_top.e_h.sb_h [SB_PAYLOAD] PAYLOAD BYTE[29] = e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(221) @ 2139: uvm_test_top.e_h.sb_h [SB_PPI_PIXEL] PPI PIXEL[0] = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(260) @ 2139: uvm_test_top.e_h.sb_h [SB_MATCH] 
+MATCH[60]
+DC Pixel = 60d4e0
+PPI Pixel = 60d4e0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(268) @ 2139: uvm_test_top.e_h.sb_h [SB_COMPARE_SIZE] SIZE OF DC=0 PPI=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(229) @ 2139: uvm_test_top.e_h.sb_h [SB_PACKET] PAYLOAD COMPLETE : 30 bytes received
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(241) @ 2139: uvm_test_top.e_h.sb_h [SB_PACKET] PACKET STATE RESET - WAITING FOR NEXT AA
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2145: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2145: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2155: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2155: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2165: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2165: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2175: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2175: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2185: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2185: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2195: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2195: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2205: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2205: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2215: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2215: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2225: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2225: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2235: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2235: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2245: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2245: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2255: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2255: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2265: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2265: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2275: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2275: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2285: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2285: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2295: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2295: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2305: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2305: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2315: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2315: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2325: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2325: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2335: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2335: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2345: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2345: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2355: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2355: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2365: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2365: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2375: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2375: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2385: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2385: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2395: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2395: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2405: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2405: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2415: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2415: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2425: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2425: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2435: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2435: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2445: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2445: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2455: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2455: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2465: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2465: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2475: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2475: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2485: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2485: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2495: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2495: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2505: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2505: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2515: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2515: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2525: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2525: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2535: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2535: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2545: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2545: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2555: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2555: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2565: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2565: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2575: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2575: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2585: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2585: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2595: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2595: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2605: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2605: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2615: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2615: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2625: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2625: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2635: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2635: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2645: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2645: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2655: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2655: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2665: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2665: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2675: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2675: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2685: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2685: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2695: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2695: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2705: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2705: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2715: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2715: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2725: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2725: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2735: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2735: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2745: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2745: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2755: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2755: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2765: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2765: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2775: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2775: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2785: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2785: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2795: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2795: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2805: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2805: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2815: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2815: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2825: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2825: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2835: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2835: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2845: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2845: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2855: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2855: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2865: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2865: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2875: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2875: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2885: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2885: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2895: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2895: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2905: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2905: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2915: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2915: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2925: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2925: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2935: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2935: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2945: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2945: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2955: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2955: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2965: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2965: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2975: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2975: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2985: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2985: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 2995: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 2995: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3005: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3005: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3015: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3015: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3025: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3025: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3035: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3035: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3045: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3045: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3055: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3055: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3065: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3065: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3075: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3075: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3085: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3085: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3095: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3095: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 3105: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 3105: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 3115: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+========================================
+           SCOREBOARD REPORT              
+========================================
+DC Transactions        : 311
+PPI Transactions       : 772
+Matched Pixels         : 60
+Mismatched Pixels      : 0
+Pending DC Pixels      : 0
+Pending PPI Pixels     : 0
+----------------------------------------
+DC  FUNCTIONAL COVERAGE: 93.33%
+DC  FUNCTIONAL COVERAGE DATA_VALID: 100.00%
+PPI FUNCTIONAL COVERAGE: 87.50%
+----------------------------------------
+========================================
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 3115: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_server.svh(901) @ 3115: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO : 1059
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[SB_COMPARE_SIZE]    60
+[SB_DC]   311
+[SB_DC_PIXEL]   311
+[SB_HEADER]    30
+[SB_MATCH]    60
+[SB_PACKET]    24
+[SB_PAYLOAD]   180
+[SB_PPI_PIXEL]    60
+[TEST_DONE]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[build_phase]     2
+[complete_transaction]     5
+[display_checked_out_features]     2
+[end_of_elaboration_phase]     1
+[new]     4
+[start_transaction]     5
+
+$finish called from file "/tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 3115
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3115 ns
+CPU Time:      1.320 seconds;       Data structure size:   2.4Mb
+Wed Nov 25 12:07:59 2026

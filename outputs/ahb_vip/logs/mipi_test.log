@@ -1,0 +1,317 @@
+Command: /home/sophia/MIPI-DSI-github/VERIFY/bin/./simv +UVM_TESTNAME=mipi_test +ntb_random_seed=1 +UVM_NO_RELNOTES +print_uvm_hier +UVM_VERBOSITY=UVM_MEDIUM +ENABLE_DUMP -cm assert -l ./logs/mipi_test.log -cm_dir ./mipi_cov.vdb
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2_Full64; Runtime version R-2020.12-SP2_Full64;  Nov 25 12:07 2026
+UVM_INFO @ 0: reporter [RNTST] Running test mipi_test...
+*Verdi* Loading libsscore_vcs202012.so
+FSDB Dumper for VCS, Release Verdi_R-2020.12-SP2, Linux x86_64/64bit, 05/23/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* : Create FSDB file './mydump.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VCS-SV simulation.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SVT, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] DESIGNWARE_HOME@compile: /tools/synopsys/vc-vip_vV-2023.12/.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(5754) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(308) @ 0: uvm_test_top.e_h.ahb_agth [build_phase] VIP Interface hierarchy = top.h_if
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_agent_svt/sverilog/src/vcs/svt_ahb_master_agent.svp(272) @ 0: uvm_test_top.e_h.ahb_agth.master[0] [build_phase] VIP Interface hierarchy = top.h_if.master_if[0]
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(749) @ 0: uvm_test_top.e_h.ahb_agth [end_of_elaboration_phase] *************** AHB System Configuration ***************
+----------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                                      Type                                 Size  Value                    
+----------------------------------------------------------------------------------------------------------------------------------------------
+ahb_cfg                                                                   svt_ahb_system_configuration         -     @874                     
+  bus_cfg                                                                 object                               -     <null>                   
+  master_cfg                                                              da(object)                           1     -                        
+    [0]                                                                   svt_ahb_master_configuration         -     @1046                    
+      slave_addr_ranges                                                   da(object)                           0     -                        
+      dest_addr_mappers                                                   da(object)                           0     -                        
+      source_addr_mappers                                                 da(object)                           0     -                        
+      sys_cfg                                                             svt_ahb_system_configuration         -     @681                     
+      inst                                                                string                               9     master[0]                
+      no_dut                                                              integral                             1     'b0                      
+      no_dut_xact_limit                                                   integral                             32    'd100                    
+      enable_signal_callbacks                                             integral                             1     'b0                      
+      enable_sled                                                         integral                             1     'b0                      
+      enable_runtime_trace_recording                                      integral                             1     'b0                      
+      filter_psdisplay_short                                              qda                                  0     -                        
+      pa_format_type                                                      svt_xml_writer::format_type_enum     32    FSDB                     
+      data_idle_value                                                     idle_val_enum                        32    INACTIVE_X_VAL           
+      data_busy_value                                                     busy_val_enum                        32    INACTIVE_PREV_VALUE      
+      control_idle_value                                                  idle_val_enum                        32    INACTIVE_LOW_VAL         
+      addr_idle_value                                                     idle_val_enum                        32    INACTIVE_LOW_VAL         
+      invariant_mode                                                      invariant_mode_enum                  32    NO_INVARIANT             
+      ahb_interface_type                                                  ahb_interface_type_enum              32    AHB                      
+      perf_inactivity_algorithm_type                                      perf_inactivity_algorithm_type_enum  32    EXCLUDE_ALL              
+      port_id                                                             integral                             32    'd0                      
+      amba_system_port_id                                                 integral                             32    -1                       
+      initialize_output_signals_at_start                                  integral                             1     'b0                      
+      nseq_during_last_beat_second_cycle_error                            integral                             1     'b0                      
+      is_active                                                           integral                             1     'b1                      
+      silent_mode                                                         integral                             1     'b0                      
+      signal_valid_during_reset_checks_enable                             integral                             1     'b1                      
+      retain_data_bus_val                                                 integral                             1     'b1                      
+      enable_xml_gen                                                      integral                             1     'b0                      
+      control_huser_enable                                                integral                             1     'b0                      
+      extended_mem_enable                                                 integral                             1     'b0                      
+      secure_enable                                                       integral                             1     'b0                      
+      enable_ebt_for_incr                                                 integral                             1     'b1                      
+      data_huser_enable                                                   integral                             1     'b0                      
+      end_incr_with_busy                                                  integral                             1     'b0                      
+      wait_state_timeout                                                  integral                             32    'd0                      
+      xact_timeout                                                        integral                             32    'd0                      
+      split_state_timeout                                                 integral                             32    'd0                      
+      addr_width                                                          integral                             32    'd32                     
+      log_base_2_data_width                                               integral                             32    'd0                      
+      data_width                                                          integral                             32    'd32                     
+      control_huser_width                                                 integral                             32    'd32                     
+      data_huser_width                                                    integral                             32    'd64                     
+      combine_unaligned_transfer_beat_values                              integral                             1     'b1                      
+      use_tlm_generic_payload                                             integral                             1     'b0                      
+      use_pv_socket                                                       integral                             1     'b0                      
+      enable_tracing                                                      integral                             1     'b0                      
+      enable_reporting                                                    integral                             1     'b0                      
+      protocol_checks_enable                                              integral                             1     'b1                      
+      protocol_checks_coverage_enable                                     integral                             1     'b0                      
+      pass_check_cov                                                      integral                             1     'b1                      
+      toggle_coverage_enable                                              integral                             1     'b0                      
+      state_coverage_enable                                               integral                             1     'b0                      
+      transaction_coverage_enable                                         integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_burst_with_busy_enable                              integral                             1     'b1                      
+      trans_cross_ahb_hburst_num_wait_cycles_enable                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hresp_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot0_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot1_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot2_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot4_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot5_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot6_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hnonsec_enable                               integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_hburst_hsize_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_enable                                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_page_boundary_size_enable                           integral                             1     'b1                      
+      trans_cross_ahb_size_addr_align_enable                              integral                             1     'b1                      
+      trans_cross_ahb_burst_incr_number_of_beats_enable                   integral                             1     'b1                      
+      trans_cross_ahb_burst_wrapped_addr_boundary_enable                  integral                             1     'b1                      
+      trans_cross_ahb_num_busy_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_num_wait_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_htrans_xact_enable                                  integral                             1     'b1                      
+      trans_ahb_hmaster_enable                                            integral                             1     'b1                      
+      trans_ahb_hready_in_when_hsel_high_enable                           integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_enable                              integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_ahb_lite_enable                     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_full_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_lite_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_full_enable     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_lite_enable     integral                             1     'b1                      
+      trans_ahb_idle_to_nseq_hready_low_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_cov_diff_xact_ahb_full_enable                      integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_lite_enable                            integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_full_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_enable                       integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_hready_enable                integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_enable                        integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_hready_enable                 integral                             1     'b1                      
+      trans_ahb_hburst_transition_enable                                  integral                             1     'b1                      
+      perf_exclude_inactive_periods_for_throughput                        integral                             1     'b0                      
+      display_xact_phase_messages                                         integral                             1     'b0                      
+      trace_file_name                                                     string                               0     ""                       
+      perf_recording_interval                                             real                                 64    0.000000                 
+      perf_max_write_xact_latency                                         real                                 64    -1.000000                
+      perf_min_write_xact_latency                                         real                                 64    -1.000000                
+      perf_avg_max_write_xact_latency                                     real                                 64    -1.000000                
+      perf_avg_min_write_xact_latency                                     real                                 64    -1.000000                
+      perf_max_read_xact_latency                                          real                                 64    -1.000000                
+      perf_min_read_xact_latency                                          real                                 64    -1.000000                
+      perf_avg_max_read_xact_latency                                      real                                 64    -1.000000                
+      perf_avg_min_read_xact_latency                                      real                                 64    -1.000000                
+      perf_max_read_throughput                                            real                                 64    -1.000000                
+      perf_min_read_throughput                                            real                                 64    -1.000000                
+      perf_max_write_throughput                                           real                                 64    -1.000000                
+      perf_min_write_throughput                                           real                                 64    -1.000000                
+      max_retries                                                         integral                             32    -1                       
+      drive_z_before_grant                                                integral                             1     'b0                      
+      assert_hbusreq_for_one_cycle_after_bus_ownership_granted            integral                             1     'b0                      
+      generate_hbstrb_and_hunalign                                        integral                             1     'b0                      
+      drive_addr_ctrl_signals_along_with_busreq_assertion                 integral                             1     'b0                      
+      nseq_in_second_cycle_error_response_for_single_burst                integral                             1     'b0                      
+      allow_both_continue_and_abort_on_error_resp_policy                  integral                             1     'b0                      
+      busy_ignore_waits                                                   integral                             1     'b0                      
+      rebuild_burst_type                                                  rebuild_burst_type_enum              32    REBUILD_BURST_TYPE_INCR  
+      uvm_reg_enable                                                      integral                             1     'b0                      
+  slave_cfg                                                               da(object)                           0     -                        
+  slave_addr_ranges                                                       da(object)                           0     -                        
+  inst                                                                    string                               25    uvm_test_top.e_h.ahb_agth
+  no_dut                                                                  integral                             1     'b0                      
+  no_dut_xact_limit                                                       integral                             32    'd100                    
+  enable_signal_callbacks                                                 integral                             1     'b0                      
+  enable_sled                                                             integral                             1     'b0                      
+  enable_runtime_trace_recording                                          integral                             1     'b0                      
+  filter_psdisplay_short                                                  qda                                  0     -                        
+  system_id                                                               integral                             32    'd0                      
+  common_clock_mode                                                       integral                             1     'b1                      
+  common_reset_mode                                                       integral                             1     'b1                      
+  num_masters                                                             integral                             32    'd1                      
+  num_slaves                                                              integral                             32    'd0                      
+  participating_masters                                                   qda                                  0     -                        
+  participating_slaves                                                    qda                                  0     -                        
+  use_bus                                                                 integral                             1     'b0                      
+  system_monitor_enable                                                   integral                             1     'b0                      
+  system_coverage_enable                                                  integral                             1     'b1                      
+  system_ahb_all_masters_grant_enable                                     integral                             1     'b1                      
+  system_ahb_all_masters_busreq_enable                                    integral                             1     'b1                      
+  system_ahb_cross_all_masters_busreq_grant_enable                        integral                             1     'b1                      
+  system_ahb_all_slaves_selected_enable                                   integral                             1     'b1                      
+  system_ahb_slaves_selection_sequence_enable                             integral                             1     'b1                      
+  protocol_checks_coverage_enable                                         integral                             1     'b0                      
+  pass_check_cov                                                          integral                             1     'b1                      
+  display_summary_report                                                  integral                             1     'b0                      
+  display_perf_summary_report                                             integral                             1     'b0                      
+  ahb3                                                                    integral                             1     'b0                      
+  ahb5                                                                    integral                             1     'b0                      
+  count_busy_only_during_hready_high                                      integral                             1     'b0                      
+  ahb_lite                                                                integral                             1     'b0                      
+  ahb_lite_multilayer                                                     integral                             1     'b0                      
+  allow_slaves_with_overlapping_addr                                      integral                             1     'b0                      
+  disable_locked_transaction_support                                      integral                             1     'b0                      
+  little_endian                                                           integral                             1     'b1                      
+  default_master                                                          integral                             32    'd0                      
+  dummy_master                                                            integral                             32    'd0                      
+  error_response_policy                                                   error_response_policy_enum           32    ABORT_ON_ERROR           
+  master_error_response_policy                                            qda                                  0     -                        
+  default_slave                                                           integral                             32    -1                       
+  default_slave_resp_check                                                integral                             1     'b0                      
+  decoder_hsel_assert_check                                               integral                             1     'b0                      
+  max_num_rebuild_attempts_on_retry_resp                                  integral                             32    -1                       
+  enable_complex_memory_map                                               integral                             1     'b0                      
+  multi_hsel_enable                                                       qda                                  0     -                        
+  multi_hsel_width                                                        qda                                  0     -                        
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------
+Name                                         Type                                  Size  Value
+----------------------------------------------------------------------------------------------
+uvm_test_top                                 mipi_test                             -     @635 
+  e_h                                        env                                   -     @672 
+    ahb_agth                                 svt_ahb_system_env                    -     @830 
+      master[0]                              svt_ahb_master_agent                  -     @1193
+        driver                               svt_ahb_master                        -     @1550
+          rsp_port                           uvm_analysis_port                     -     @1569
+          seq_item_port                      uvm_seq_item_pull_port                -     @1559
+          cfg                                svt_ahb_master_configuration          -     @1846
+        monitor                              svt_ahb_master_monitor                -     @1585
+          item_observed_port                 uvm_analysis_port                     -     @1598
+          item_observed_port_intercept       uvm_component                         -     @1608
+            m_export                         uvm_analysis_imp                      -     @1627
+            m_port                           uvm_analysis_port                     -     @1617
+          tlm_generic_payload_observed_port  uvm_analysis_port                     -     @1638
+          cfg                                svt_ahb_master_configuration          -     @1857
+        sequencer                            svt_ahb_master_transaction_sequencer  -     @1385
+          rsp_export                         uvm_analysis_export                   -     @1394
+          seq_item_export                    uvm_seq_item_pull_imp                 -     @1512
+          tlm_gp_seq_item_port               uvm_seq_item_pull_port                -     @1539
+          vlog_cmd_put_export                uvm_blocking_put_imp                  -     @1529
+          cfg                                svt_ahb_master_configuration          -     @1981
+          arbitration_queue                  array                                 0     -    
+          lock_queue                         array                                 0     -    
+          num_last_reqs                      integral                              32    'd1  
+          num_last_rsps                      integral                              32    'd1  
+        cfg                                  svt_ahb_master_configuration          -     @1367
+      sequencer                              svt_ahb_system_sequencer              -     @1211
+        rsp_export                           uvm_analysis_export                   -     @1220
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @1338
+        cfg                                  svt_ahb_system_configuration          -     @681 
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+      cfg                                    svt_ahb_system_configuration          -     @874 
+    dc_agth                                  dc_agent                              -     @844 
+      dc_drvh                                dc_driver                             -     @2149
+        rsp_port                             uvm_analysis_port                     -     @2168
+        seq_item_port                        uvm_seq_item_pull_port                -     @2158
+      dc_monh                                dc_monitor                            -     @2003
+        dc_cov_port                          uvm_analysis_port                     -     @2189
+        dc_port                              uvm_analysis_port                     -     @2179
+      dc_sqrh                                dc_seqr                               -     @2012
+        rsp_export                           uvm_analysis_export                   -     @2021
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @2139
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+    ppi_agth                                 ppi_agent                             -     @853 
+      ppi_monh                               ppi_monitor                           -     @2211
+        ppi_port                             uvm_analysis_port                     -     @2220
+    sb_h                                     sb                                    -     @862 
+      dc_fifo                                uvm_tlm_analysis_fifo #(T)            -     @2231
+        analysis_export                      uvm_analysis_imp                      -     @2280
+        get_ap                               uvm_analysis_port                     -     @2270
+        get_peek_export                      uvm_get_peek_imp                      -     @2250
+        put_ap                               uvm_analysis_port                     -     @2260
+        put_export                           uvm_put_imp                           -     @2240
+      ppi_fifo                               uvm_tlm_analysis_fifo #(T)            -     @2290
+        analysis_export                      uvm_analysis_imp                      -     @2339
+        get_ap                               uvm_analysis_port                     -     @2329
+        get_peek_export                      uvm_get_peek_imp                      -     @2309
+        put_ap                               uvm_analysis_port                     -     @2319
+        put_export                           uvm_put_imp                           -     @2299
+----------------------------------------------------------------------------------------------
+
+
+========================================
+           SCOREBOARD REPORT              
+========================================
+DC Transactions        : 0
+PPI Transactions       : 0
+Matched Pixels         : 0
+Mismatched Pixels      : 0
+Pending DC Pixels      : 0
+Pending PPI Pixels     : 0
+----------------------------------------
+DC  FUNCTIONAL COVERAGE: 0.00%
+DC  FUNCTIONAL COVERAGE DATA_VALID: 0.00%
+PPI FUNCTIONAL COVERAGE: 0.00%
+----------------------------------------
+========================================
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 0: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_server.svh(901) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   10
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[build_phase]     2
+[end_of_elaboration_phase]     1
+[new]     4
+
+$finish called from file "/tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                    0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ns
+CPU Time:      1.210 seconds;       Data structure size:   2.3Mb
+Wed Nov 25 12:07:52 2026

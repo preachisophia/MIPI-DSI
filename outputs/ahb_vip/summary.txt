@@ -1,0 +1,29 @@
+AHB=vip  SEED=1  2026-11-25 12:17
+
+ahb_ctrl0reg_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 0
+ahb_dsicmdreg_test     UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 0
+ahb_dsilngreg_test     UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 0
+ahb_payloadreg_test    UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 0
+dsi_frame5_test        UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 150
+frame_10_test          UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 300
+lane_0_test            UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+lane_1_test            UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+lane_2_test            UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+lane_3_test            UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+mipi_test              UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 0
+pixel_black_test       UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_blue_test        UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_green_test       UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_high_test        UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_low_test         UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_random_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_red_test         UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+pixel_white_test       UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+resol_fullhd_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 4147200
+resol_hd_test          UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 1843200
+resol_normal_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+resol_random_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 614400
+resol_vga_test         UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 614400
+vsync_10_test          UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+vsync_5_test           UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60
+vsync_random_test      UVM_ERROR :    0   UVM_FATAL :    0   Matched Pixels : 60

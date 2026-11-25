@@ -1,0 +1,543 @@
+Command: /home/sophia/MIPI-DSI-github/VERIFY/bin/./simv +UVM_TESTNAME=ahb_dsilngreg_test +ntb_random_seed=1 +UVM_NO_RELNOTES +print_uvm_hier +UVM_VERBOSITY=UVM_MEDIUM +ENABLE_DUMP -cm assert -l ./logs/ahb_dsilngreg_test.log -cm_dir ./mipi_cov.vdb
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2_Full64; Runtime version R-2020.12-SP2_Full64;  Nov 25 12:17 2026
+UVM_INFO @ 0: reporter [RNTST] Running test ahb_dsilngreg_test...
+*Verdi* Loading libsscore_vcs202012.so
+FSDB Dumper for VCS, Release Verdi_R-2020.12-SP2, Linux x86_64/64bit, 05/23/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file './mydump.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VCS-SV simulation.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: SVT, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(2336) @ 0: reporter [new] DESIGNWARE_HOME@compile: /tools/synopsys/vc-vip_vV-2023.12/.
+TimeScale of svt_uvm_pkg is 1 ns / 1 ns 
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_sequence_item_base.svp(5754) @ 0: reporter [new] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP Version: V-2023.12
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(308) @ 0: uvm_test_top.e_h.ahb_agth [build_phase] VIP Interface hierarchy = top.h_if
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_agent_svt/sverilog/src/vcs/svt_ahb_master_agent.svp(272) @ 0: uvm_test_top.e_h.ahb_agth.master[0] [build_phase] VIP Interface hierarchy = top.h_if.master_if[0]
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_system_env_svt/sverilog/src/vcs/svt_ahb_system_env.svp(749) @ 0: uvm_test_top.e_h.ahb_agth [end_of_elaboration_phase] *************** AHB System Configuration ***************
+----------------------------------------------------------------------------------------------------------------------------------------------
+Name                                                                      Type                                 Size  Value                    
+----------------------------------------------------------------------------------------------------------------------------------------------
+ahb_cfg                                                                   svt_ahb_system_configuration         -     @880                     
+  bus_cfg                                                                 object                               -     <null>                   
+  master_cfg                                                              da(object)                           1     -                        
+    [0]                                                                   svt_ahb_master_configuration         -     @1052                    
+      slave_addr_ranges                                                   da(object)                           0     -                        
+      dest_addr_mappers                                                   da(object)                           0     -                        
+      source_addr_mappers                                                 da(object)                           0     -                        
+      sys_cfg                                                             svt_ahb_system_configuration         -     @687                     
+      inst                                                                string                               9     master[0]                
+      no_dut                                                              integral                             1     'b0                      
+      no_dut_xact_limit                                                   integral                             32    'd100                    
+      enable_signal_callbacks                                             integral                             1     'b0                      
+      enable_sled                                                         integral                             1     'b0                      
+      enable_runtime_trace_recording                                      integral                             1     'b0                      
+      filter_psdisplay_short                                              qda                                  0     -                        
+      pa_format_type                                                      svt_xml_writer::format_type_enum     32    FSDB                     
+      data_idle_value                                                     idle_val_enum                        32    INACTIVE_X_VAL           
+      data_busy_value                                                     busy_val_enum                        32    INACTIVE_PREV_VALUE      
+      control_idle_value                                                  idle_val_enum                        32    INACTIVE_LOW_VAL         
+      addr_idle_value                                                     idle_val_enum                        32    INACTIVE_LOW_VAL         
+      invariant_mode                                                      invariant_mode_enum                  32    NO_INVARIANT             
+      ahb_interface_type                                                  ahb_interface_type_enum              32    AHB                      
+      perf_inactivity_algorithm_type                                      perf_inactivity_algorithm_type_enum  32    EXCLUDE_ALL              
+      port_id                                                             integral                             32    'd0                      
+      amba_system_port_id                                                 integral                             32    -1                       
+      initialize_output_signals_at_start                                  integral                             1     'b0                      
+      nseq_during_last_beat_second_cycle_error                            integral                             1     'b0                      
+      is_active                                                           integral                             1     'b1                      
+      silent_mode                                                         integral                             1     'b0                      
+      signal_valid_during_reset_checks_enable                             integral                             1     'b1                      
+      retain_data_bus_val                                                 integral                             1     'b1                      
+      enable_xml_gen                                                      integral                             1     'b0                      
+      control_huser_enable                                                integral                             1     'b0                      
+      extended_mem_enable                                                 integral                             1     'b0                      
+      secure_enable                                                       integral                             1     'b0                      
+      enable_ebt_for_incr                                                 integral                             1     'b1                      
+      data_huser_enable                                                   integral                             1     'b0                      
+      end_incr_with_busy                                                  integral                             1     'b0                      
+      wait_state_timeout                                                  integral                             32    'd0                      
+      xact_timeout                                                        integral                             32    'd0                      
+      split_state_timeout                                                 integral                             32    'd0                      
+      addr_width                                                          integral                             32    'd32                     
+      log_base_2_data_width                                               integral                             32    'd0                      
+      data_width                                                          integral                             32    'd32                     
+      control_huser_width                                                 integral                             32    'd32                     
+      data_huser_width                                                    integral                             32    'd64                     
+      combine_unaligned_transfer_beat_values                              integral                             1     'b1                      
+      use_tlm_generic_payload                                             integral                             1     'b0                      
+      use_pv_socket                                                       integral                             1     'b0                      
+      enable_tracing                                                      integral                             1     'b0                      
+      enable_reporting                                                    integral                             1     'b0                      
+      protocol_checks_enable                                              integral                             1     'b1                      
+      protocol_checks_coverage_enable                                     integral                             1     'b0                      
+      pass_check_cov                                                      integral                             1     'b1                      
+      toggle_coverage_enable                                              integral                             1     'b0                      
+      state_coverage_enable                                               integral                             1     'b0                      
+      transaction_coverage_enable                                         integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_burst_with_busy_enable                              integral                             1     'b1                      
+      trans_cross_ahb_hburst_num_wait_cycles_enable                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hresp_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot0_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot1_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot2_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_enable                                integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot3_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot4_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot5_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hprot6_ex_enable                             integral                             1     'b1                      
+      trans_cross_ahb_hburst_hnonsec_enable                               integral                             1     'b1                      
+      trans_cross_ahb_hburst_haddr_hsize_enable                           integral                             1     'b1                      
+      trans_cross_ahb_hburst_hsize_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_hburst_enable                                       integral                             1     'b1                      
+      trans_cross_ahb_hburst_hlock_enable                                 integral                             1     'b1                      
+      trans_cross_ahb_page_boundary_size_enable                           integral                             1     'b1                      
+      trans_cross_ahb_size_addr_align_enable                              integral                             1     'b1                      
+      trans_cross_ahb_burst_incr_number_of_beats_enable                   integral                             1     'b1                      
+      trans_cross_ahb_burst_wrapped_addr_boundary_enable                  integral                             1     'b1                      
+      trans_cross_ahb_num_busy_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_num_wait_cycles_enable                              integral                             1     'b1                      
+      trans_cross_ahb_htrans_xact_enable                                  integral                             1     'b1                      
+      trans_ahb_hmaster_enable                                            integral                             1     'b1                      
+      trans_ahb_hready_in_when_hsel_high_enable                           integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_enable                              integral                             1     'b1                      
+      trans_ahb_full_hresp_first_beat_ahb_lite_enable                     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_full_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_continue_on_error_ahb_lite_enable  integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_full_enable     integral                             1     'b1                      
+      trans_ahb_beat_hresp_transistion_abort_on_error_ahb_lite_enable     integral                             1     'b1                      
+      trans_ahb_idle_to_nseq_hready_low_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_cov_diff_xact_ahb_full_enable                      integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_lite_enable                            integral                             1     'b1                      
+      trans_ahb_hresp_all_beat_ahb_full_enable                            integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_enable                       integral                             1     'b1                      
+      trans_ahb_htrans_transition_write_xact_hready_enable                integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_enable                        integral                             1     'b1                      
+      trans_ahb_htrans_transition_read_xact_hready_enable                 integral                             1     'b1                      
+      trans_ahb_hburst_transition_enable                                  integral                             1     'b1                      
+      perf_exclude_inactive_periods_for_throughput                        integral                             1     'b0                      
+      display_xact_phase_messages                                         integral                             1     'b0                      
+      trace_file_name                                                     string                               0     ""                       
+      perf_recording_interval                                             real                                 64    0.000000                 
+      perf_max_write_xact_latency                                         real                                 64    -1.000000                
+      perf_min_write_xact_latency                                         real                                 64    -1.000000                
+      perf_avg_max_write_xact_latency                                     real                                 64    -1.000000                
+      perf_avg_min_write_xact_latency                                     real                                 64    -1.000000                
+      perf_max_read_xact_latency                                          real                                 64    -1.000000                
+      perf_min_read_xact_latency                                          real                                 64    -1.000000                
+      perf_avg_max_read_xact_latency                                      real                                 64    -1.000000                
+      perf_avg_min_read_xact_latency                                      real                                 64    -1.000000                
+      perf_max_read_throughput                                            real                                 64    -1.000000                
+      perf_min_read_throughput                                            real                                 64    -1.000000                
+      perf_max_write_throughput                                           real                                 64    -1.000000                
+      perf_min_write_throughput                                           real                                 64    -1.000000                
+      max_retries                                                         integral                             32    -1                       
+      drive_z_before_grant                                                integral                             1     'b0                      
+      assert_hbusreq_for_one_cycle_after_bus_ownership_granted            integral                             1     'b0                      
+      generate_hbstrb_and_hunalign                                        integral                             1     'b0                      
+      drive_addr_ctrl_signals_along_with_busreq_assertion                 integral                             1     'b0                      
+      nseq_in_second_cycle_error_response_for_single_burst                integral                             1     'b0                      
+      allow_both_continue_and_abort_on_error_resp_policy                  integral                             1     'b0                      
+      busy_ignore_waits                                                   integral                             1     'b0                      
+      rebuild_burst_type                                                  rebuild_burst_type_enum              32    REBUILD_BURST_TYPE_INCR  
+      uvm_reg_enable                                                      integral                             1     'b0                      
+  slave_cfg                                                               da(object)                           0     -                        
+  slave_addr_ranges                                                       da(object)                           0     -                        
+  inst                                                                    string                               25    uvm_test_top.e_h.ahb_agth
+  no_dut                                                                  integral                             1     'b0                      
+  no_dut_xact_limit                                                       integral                             32    'd100                    
+  enable_signal_callbacks                                                 integral                             1     'b0                      
+  enable_sled                                                             integral                             1     'b0                      
+  enable_runtime_trace_recording                                          integral                             1     'b0                      
+  filter_psdisplay_short                                                  qda                                  0     -                        
+  system_id                                                               integral                             32    'd0                      
+  common_clock_mode                                                       integral                             1     'b1                      
+  common_reset_mode                                                       integral                             1     'b1                      
+  num_masters                                                             integral                             32    'd1                      
+  num_slaves                                                              integral                             32    'd0                      
+  participating_masters                                                   qda                                  0     -                        
+  participating_slaves                                                    qda                                  0     -                        
+  use_bus                                                                 integral                             1     'b0                      
+  system_monitor_enable                                                   integral                             1     'b0                      
+  system_coverage_enable                                                  integral                             1     'b1                      
+  system_ahb_all_masters_grant_enable                                     integral                             1     'b1                      
+  system_ahb_all_masters_busreq_enable                                    integral                             1     'b1                      
+  system_ahb_cross_all_masters_busreq_grant_enable                        integral                             1     'b1                      
+  system_ahb_all_slaves_selected_enable                                   integral                             1     'b1                      
+  system_ahb_slaves_selection_sequence_enable                             integral                             1     'b1                      
+  protocol_checks_coverage_enable                                         integral                             1     'b0                      
+  pass_check_cov                                                          integral                             1     'b1                      
+  display_summary_report                                                  integral                             1     'b0                      
+  display_perf_summary_report                                             integral                             1     'b0                      
+  ahb3                                                                    integral                             1     'b0                      
+  ahb5                                                                    integral                             1     'b0                      
+  count_busy_only_during_hready_high                                      integral                             1     'b0                      
+  ahb_lite                                                                integral                             1     'b0                      
+  ahb_lite_multilayer                                                     integral                             1     'b0                      
+  allow_slaves_with_overlapping_addr                                      integral                             1     'b0                      
+  disable_locked_transaction_support                                      integral                             1     'b0                      
+  little_endian                                                           integral                             1     'b1                      
+  default_master                                                          integral                             32    'd0                      
+  dummy_master                                                            integral                             32    'd0                      
+  error_response_policy                                                   error_response_policy_enum           32    ABORT_ON_ERROR           
+  master_error_response_policy                                            qda                                  0     -                        
+  default_slave                                                           integral                             32    -1                       
+  default_slave_resp_check                                                integral                             1     'b0                      
+  decoder_hsel_assert_check                                               integral                             1     'b0                      
+  max_num_rebuild_attempts_on_retry_resp                                  integral                             32    -1                       
+  enable_complex_memory_map                                               integral                             1     'b0                      
+  multi_hsel_enable                                                       qda                                  0     -                        
+  multi_hsel_width                                                        qda                                  0     -                        
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------
+Name                                         Type                                  Size  Value
+----------------------------------------------------------------------------------------------
+uvm_test_top                                 ahb_dsilngreg_test                    -     @635 
+  e_h                                        env                                   -     @672 
+    ahb_agth                                 svt_ahb_system_env                    -     @836 
+      master[0]                              svt_ahb_master_agent                  -     @1199
+        driver                               svt_ahb_master                        -     @1556
+          rsp_port                           uvm_analysis_port                     -     @1575
+          seq_item_port                      uvm_seq_item_pull_port                -     @1565
+          cfg                                svt_ahb_master_configuration          -     @1852
+        monitor                              svt_ahb_master_monitor                -     @1591
+          item_observed_port                 uvm_analysis_port                     -     @1604
+          item_observed_port_intercept       uvm_component                         -     @1614
+            m_export                         uvm_analysis_imp                      -     @1633
+            m_port                           uvm_analysis_port                     -     @1623
+          tlm_generic_payload_observed_port  uvm_analysis_port                     -     @1644
+          cfg                                svt_ahb_master_configuration          -     @1863
+        sequencer                            svt_ahb_master_transaction_sequencer  -     @1391
+          rsp_export                         uvm_analysis_export                   -     @1400
+          seq_item_export                    uvm_seq_item_pull_imp                 -     @1518
+          tlm_gp_seq_item_port               uvm_seq_item_pull_port                -     @1545
+          vlog_cmd_put_export                uvm_blocking_put_imp                  -     @1535
+          cfg                                svt_ahb_master_configuration          -     @1987
+          arbitration_queue                  array                                 0     -    
+          lock_queue                         array                                 0     -    
+          num_last_reqs                      integral                              32    'd1  
+          num_last_rsps                      integral                              32    'd1  
+        cfg                                  svt_ahb_master_configuration          -     @1373
+      sequencer                              svt_ahb_system_sequencer              -     @1217
+        rsp_export                           uvm_analysis_export                   -     @1226
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @1344
+        cfg                                  svt_ahb_system_configuration          -     @687 
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+      cfg                                    svt_ahb_system_configuration          -     @880 
+    dc_agth                                  dc_agent                              -     @850 
+      dc_drvh                                dc_driver                             -     @2155
+        rsp_port                             uvm_analysis_port                     -     @2174
+        seq_item_port                        uvm_seq_item_pull_port                -     @2164
+      dc_monh                                dc_monitor                            -     @2009
+        dc_cov_port                          uvm_analysis_port                     -     @2195
+        dc_port                              uvm_analysis_port                     -     @2185
+      dc_sqrh                                dc_seqr                               -     @2018
+        rsp_export                           uvm_analysis_export                   -     @2027
+        seq_item_export                      uvm_seq_item_pull_imp                 -     @2145
+        arbitration_queue                    array                                 0     -    
+        lock_queue                           array                                 0     -    
+        num_last_reqs                        integral                              32    'd1  
+        num_last_rsps                        integral                              32    'd1  
+    ppi_agth                                 ppi_agent                             -     @859 
+      ppi_monh                               ppi_monitor                           -     @2217
+        ppi_port                             uvm_analysis_port                     -     @2226
+    sb_h                                     sb                                    -     @868 
+      dc_fifo                                uvm_tlm_analysis_fifo #(T)            -     @2237
+        analysis_export                      uvm_analysis_imp                      -     @2286
+        get_ap                               uvm_analysis_port                     -     @2276
+        get_peek_export                      uvm_get_peek_imp                      -     @2256
+        put_ap                               uvm_analysis_port                     -     @2266
+        put_export                           uvm_put_imp                           -     @2246
+      ppi_fifo                               uvm_tlm_analysis_fifo #(T)            -     @2296
+        analysis_export                      uvm_analysis_imp                      -     @2345
+        get_ap                               uvm_analysis_port                     -     @2335
+        get_peek_export                      uvm_get_peek_imp                      -     @2315
+        put_ap                               uvm_analysis_port                     -     @2325
+        put_export                           uvm_put_imp                           -     @2305
+----------------------------------------------------------------------------------------------
+
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_agent.svp(405) @ 1: uvm_test_top.e_h.ahb_agth.master[0] [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP License: VIP-AMBA-AHB-SVT
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/common/V-2023.12/sverilog/src/vcs/svt_env.svp(719) @ 1: uvm_test_top.e_h.ahb_agth [display_checked_out_features] VIP Vendor: Synopsys, VIP Suite: AMBA-AHB, VIP License: VIP-AMBA-AHB-SVT
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 5: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d0) LOCK('b1) XACT_TYPE(WRITE) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 5: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 5: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 15: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 15: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 25: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 25: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/ahb_master_svt/sverilog/src/vcs/svt_ahb_master_active_common.svp(290) @ 25: uvm_test_top.e_h.ahb_agth.master[0] [start_transaction] Transaction started  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d1) LOCK('b0) XACT_TYPE(READ) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(INITIAL) CURR_DATA_BEAT_NUM('d0)   } 
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 35: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 35: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 45: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 45: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 45: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d0) LOCK('b1) XACT_TYPE(WRITE) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 55: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 55: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vc-vip_vV-2023.12/vip/svt/amba_svt/V-2023.12/sverilog/src/vcs/svt_ahb_master_common.svp(1554) @ 55: uvm_test_top.e_h.ahb_agth.master[0] [complete_transaction] Transaction ended for  AHB transaction {PORT_ID('d0) PORT_NAME() OBJECT_NUM('d1) LOCK('b0) XACT_TYPE(READ) ADDR('h40000008) BURST_TYPE(SINGLE) BURST_LENGTH('d1) BURST_SIZE(BURST_SIZE_32BIT) STATUS(ACCEPT) CURR_DATA_BEAT_NUM('d0)   }  
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvc/agent_top/ahb_agent/ahb_seqs.sv(92) @ 55: uvm_test_top.e_h.ahb_agth.master[0].sequencer@@ahb_seqsh [AHB_REG] Register 40000008: wrote and read back 0000003c
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 65: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 65: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 75: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 75: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 85: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 85: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 95: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 95: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 105: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 105: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 115: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 115: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 125: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 125: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 135: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 135: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 145: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 145: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 155: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 155: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 165: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 165: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 175: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 175: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 185: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 185: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 195: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 195: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 205: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 205: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 215: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 215: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 225: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 225: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 235: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 235: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 245: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 245: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 255: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 255: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 265: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 265: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 275: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 275: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 285: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 285: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 295: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 295: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 305: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 305: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 315: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 315: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 325: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 325: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 335: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 335: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 345: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 345: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 355: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 355: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 365: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 365: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 375: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 375: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 385: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 385: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 395: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 395: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 405: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 405: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 415: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 415: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 425: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 425: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 435: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 435: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 445: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 445: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 455: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 455: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 465: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 465: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 475: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 475: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 485: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 485: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 495: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 495: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 505: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 505: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 515: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 515: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 525: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 525: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 535: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 535: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 545: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 545: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 555: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 555: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 565: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 565: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 575: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 575: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 585: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 585: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 595: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 595: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 605: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 605: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 615: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 615: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 625: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 625: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 635: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 635: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 645: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 645: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 655: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 655: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 665: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 665: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 675: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 675: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 685: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 685: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 695: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 695: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 705: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 705: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 715: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 715: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 725: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 725: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 735: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 735: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 745: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 745: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 755: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 755: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 765: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 765: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 775: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 775: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 785: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 785: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 795: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 795: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 805: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 805: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 815: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 815: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 825: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 825: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 835: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 835: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 845: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 845: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 855: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 855: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 865: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 865: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 875: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 875: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 885: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 885: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 895: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 895: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 905: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 905: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 915: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 915: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 925: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 925: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 935: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 935: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 945: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 945: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 955: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 955: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 965: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 965: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 975: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 975: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 985: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 985: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 995: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 995: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1005: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1005: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1015: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1015: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1025: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1025: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1035: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1035: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(101) @ 1045: uvm_test_top.e_h.sb_h [SB_DC] Received DC Transaction DC_PIXEL DATAS=0
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvm_tb/sb/sb.sv(104) @ 1045: uvm_test_top.e_h.sb_h [SB_DC_PIXEL] DC Pixel = 0
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 1055: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+========================================
+           SCOREBOARD REPORT              
+========================================
+DC Transactions        : 105
+PPI Transactions       : 257
+Matched Pixels         : 0
+Mismatched Pixels      : 0
+Pending DC Pixels      : 0
+Pending PPI Pixels     : 0
+----------------------------------------
+DC  FUNCTIONAL COVERAGE: 6.67%
+DC  FUNCTIONAL COVERAGE DATA_VALID: 0.00%
+PPI FUNCTIONAL COVERAGE: 0.00%
+----------------------------------------
+========================================
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 1055: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_server.svh(901) @ 1055: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  228
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AHB_REG]     1
+[RNTST]     1
+[SB_DC]   105
+[SB_DC_PIXEL]   105
+[TEST_DONE]     1
+[UVM/REPORT/CATCHER]     1
+[UVMTOP]     1
+[build_phase]     2
+[complete_transaction]     2
+[display_checked_out_features]     2
+[end_of_elaboration_phase]     1
+[new]     4
+[start_transaction]     2
+
+$finish called from file "/tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                 1055
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1055 ns
+CPU Time:      1.120 seconds;       Data structure size:   2.4Mb
+Wed Nov 25 12:17:30 2026

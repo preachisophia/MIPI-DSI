@@ -149,4 +149,13 @@ The VGA, HD and Full HD tests move millions of pixels, so they run with per-pixe
 | Resolution | resol_normal_test, resol_vga_test, resol_hd_test, resol_fullhd_test, resol_random_test |
 | Registers | ahb_payloadreg_test, ahb_dsicmdreg_test, ahb_dsilngreg_test, ahb_ctrl0reg_test |
 
-Current status (`make regress SEED=1`): 27 of 27 pass with no UVM errors. The Full HD test compares 4,147,200 pixels (1920 x 1080, 2 frames).
+## Results
+
+`make regress SEED=1` passes all 27 tests with no UVM errors with both AHB masters:
+
+| AHB master | Pass | UVM_ERROR | UVM_FATAL |
+|---|---|---|---|
+| `AHB=vip` (Synopsys VIP) | 27 / 27 | 0 | 0 |
+| `AHB=own` (own agent) | 27 / 27 | 0 | 0 |
+
+The Full HD test compares 4,147,200 pixels (1920 x 1080, 2 frames). The logs and a per-test summary for both runs are in [`outputs/`](outputs/).

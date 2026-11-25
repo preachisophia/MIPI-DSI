@@ -1,0 +1,98 @@
+Command: /home/sophia/MIPI-DSI-github/VERIFY/bin/./simv +UVM_TESTNAME=mipi_test +ntb_random_seed=1 +UVM_NO_RELNOTES +print_uvm_hier +UVM_VERBOSITY=UVM_MEDIUM +ENABLE_DUMP -cm assert -l ./logs/mipi_test.log -cm_dir ./mipi_cov.vdb
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12-SP2_Full64; Runtime version R-2020.12-SP2_Full64;  Nov 25 12:17 2026
+UVM_INFO @ 0: reporter [RNTST] Running test mipi_test...
+*Verdi* Loading libsscore_vcs202012.so
+FSDB Dumper for VCS, Release Verdi_R-2020.12-SP2, Linux x86_64/64bit, 05/23/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* : Create FSDB file './mydump.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh(589) @ 0: reporter [UVMTOP] UVM testbench topology:
+------------------------------------------------------------------
+Name                       Type                        Size  Value
+------------------------------------------------------------------
+uvm_test_top               mipi_test                   -     @353 
+  e_h                      env                         -     @390 
+    ahb_agth               ahb_agent                   -     @406 
+      ahb_drvh             ahb_driver                  -     @590 
+        rsp_port           uvm_analysis_port           -     @609 
+        seq_item_port      uvm_seq_item_pull_port      -     @599 
+      ahb_monh             ahb_monitor                 -     @444 
+        ahb_port           uvm_analysis_port           -     @620 
+      ahb_sqrh             ahb_seqr                    -     @453 
+        rsp_export         uvm_analysis_export         -     @462 
+        seq_item_export    uvm_seq_item_pull_imp       -     @580 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+    dc_agth                dc_agent                    -     @415 
+      dc_drvh              dc_driver                   -     @788 
+        rsp_port           uvm_analysis_port           -     @807 
+        seq_item_port      uvm_seq_item_pull_port      -     @797 
+      dc_monh              dc_monitor                  -     @642 
+        dc_cov_port        uvm_analysis_port           -     @828 
+        dc_port            uvm_analysis_port           -     @818 
+      dc_sqrh              dc_seqr                     -     @651 
+        rsp_export         uvm_analysis_export         -     @660 
+        seq_item_export    uvm_seq_item_pull_imp       -     @778 
+        arbitration_queue  array                       0     -    
+        lock_queue         array                       0     -    
+        num_last_reqs      integral                    32    'd1  
+        num_last_rsps      integral                    32    'd1  
+    ppi_agth               ppi_agent                   -     @424 
+      ppi_monh             ppi_monitor                 -     @850 
+        ppi_port           uvm_analysis_port           -     @859 
+    sb_h                   sb                          -     @433 
+      dc_fifo              uvm_tlm_analysis_fifo #(T)  -     @870 
+        analysis_export    uvm_analysis_imp            -     @919 
+        get_ap             uvm_analysis_port           -     @909 
+        get_peek_export    uvm_get_peek_imp            -     @889 
+        put_ap             uvm_analysis_port           -     @899 
+        put_export         uvm_put_imp                 -     @879 
+      ppi_fifo             uvm_tlm_analysis_fifo #(T)  -     @929 
+        analysis_export    uvm_analysis_imp            -     @978 
+        get_ap             uvm_analysis_port           -     @968 
+        get_peek_export    uvm_get_peek_imp            -     @948 
+        put_ap             uvm_analysis_port           -     @958 
+        put_export         uvm_put_imp                 -     @938 
+------------------------------------------------------------------
+
+UVM_INFO /home/sophia/MIPI-DSI-github/VERIFY/uvc/agent_top/ahb_agent/ahb_monitor.sv(76) @ 0: uvm_test_top.e_h.ahb_agth.ahb_monh [AHB_MON] AHB transfers observed: 0
+
+========================================
+           SCOREBOARD REPORT              
+========================================
+DC Transactions        : 0
+PPI Transactions       : 0
+Matched Pixels         : 0
+Mismatched Pixels      : 0
+Pending DC Pixels      : 0
+Pending PPI Pixels     : 0
+----------------------------------------
+DC  FUNCTIONAL COVERAGE: 0.00%
+DC  FUNCTIONAL COVERAGE DATA_VALID: 0.00%
+PPI FUNCTIONAL COVERAGE: 0.00%
+----------------------------------------
+========================================
+UVM_INFO /tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_report_server.svh(901) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    3
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[AHB_MON]     1
+[RNTST]     1
+[UVMTOP]     1
+
+$finish called from file "/tools/synopsys/vcs/R-2020.12-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                    0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ns
+CPU Time:      0.720 seconds;       Data structure size:   0.9Mb
+Wed Nov 25 12:17:59 2026
